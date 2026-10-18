@@ -10,14 +10,14 @@
 :root{--bg:#0c0005;--wine:#3A0716;--red:#FF4A3D;--red2:#d8392e;--paper:#f4f1ea;--ink:#f4f1ea;--mute:#a99d98;--line:rgba(255,74,61,.22);
 --ok:#4ade80;--sent:#60a5fa;--review:#fbbf24;--fix:#FF4A3D;--draft:#a8a29e;--wait:#c084fc}
 *{box-sizing:border-box}
-html{background:var(--bg)}
-body{margin:0;color:var(--ink);font:16px/1.55 Rubik,system-ui,sans-serif;min-height:100vh;overflow-x:hidden;
+html{background:var(--bg);overflow-x:hidden;overflow-x:clip}
+body{margin:0;color:var(--ink);font:16px/1.55 Rubik,system-ui,sans-serif;min-height:100vh;overflow-x:hidden;overflow-x:clip;max-width:100vw;
 background:radial-gradient(60vw 50vw at 85% -5%,#5a0b1f 0,transparent 60%),radial-gradient(50vw 40vw at 0% 40%,#2a0510 0,transparent 70%),var(--bg)}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;z-index:0;
 background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 .ghost{position:fixed;left:-4vw;bottom:-8vw;font:900 42vw/1 Rubik;color:transparent;-webkit-text-stroke:2px rgba(255,74,61,.07);pointer-events:none;z-index:0;user-select:none}
 .wrap{position:relative;z-index:1;max-width:1180px;margin:auto;padding:28px 20px 60px}
-.neon{position:absolute;inset:0 0 auto 0;height:260px;pointer-events:none;z-index:0}
+.neon{position:absolute;top:0;left:0;width:100%;height:260px;pointer-events:none;z-index:0}
 .neon path{fill:none;stroke:var(--red);stroke-width:3;filter:drop-shadow(0 0 6px var(--red)) drop-shadow(0 0 18px var(--red2));
 stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 2.4s cubic-bezier(.65,0,.35,1) .2s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
@@ -33,9 +33,9 @@ h1 em{font-style:normal;color:var(--red);text-shadow:0 0 18px rgba(255,74,61,.55
 .clock{border:1px solid var(--line);background:linear-gradient(180deg,rgba(58,7,22,.75),rgba(12,0,5,.75));border-radius:18px;padding:18px 18px 16px;margin-bottom:18px;text-align:center;position:relative;overflow:hidden}
 .clock .lbl{font-weight:700;letter-spacing:.02em;color:var(--mute)}
 .clock .lbl b{color:var(--ink)}
-.digits{display:flex;justify-content:center;gap:clamp(8px,2.4vw,22px);margin:10px 0 4px;direction:rtl}
-.u{min-width:clamp(62px,15vw,128px)}
-.u .n{display:block;font:900 clamp(44px,10vw,96px)/1 Rubik;font-variant-numeric:tabular-nums;color:var(--red);text-shadow:0 0 14px rgba(255,74,61,.7),0 0 40px rgba(255,74,61,.35)}
+.digits{display:flex;justify-content:center;gap:clamp(4px,2vw,22px);margin:10px 0 4px;direction:rtl}
+.u{min-width:clamp(48px,15vw,128px)}
+.u .n{display:block;font:900 clamp(36px,10vw,96px)/1 Rubik;font-variant-numeric:tabular-nums;color:var(--red);text-shadow:0 0 14px rgba(255,74,61,.7),0 0 40px rgba(255,74,61,.35)}
 .u small{color:var(--mute);font-weight:500}
 .sep{font:900 clamp(36px,8vw,80px)/1 Rubik;color:rgba(255,74,61,.4);align-self:flex-start;padding-top:4px}
 .clock.hot{animation:pulse 1s ease-in-out infinite}
@@ -80,7 +80,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
 <section class="hero">
   <div class="note"><b>שס</b><span>התאחדות הספרדים<br>שומרי תורה</span></div>
   <div><h1>חדר המצב<br><em>לא מתפשרים.</em></h1>
-  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 18/10 16:41</div></div>
+  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 18/10 18:36</div></div>
 </section>
 <section class="clock" id="clock">
   <div class="lbl">עד שהקלפיות נפתחות · <b>יום שלישי, 27.10 בשעה 07:00</b></div>
