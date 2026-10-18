@@ -64,7 +64,7 @@ h3{font-size:13px;color:var(--red);margin:14px 0 4px;font-weight:700;letter-spac
 ul{margin:0;padding-inline-start:20px}li{margin:3px 0}
 .fix li::marker{color:var(--red)}
 .done li{color:var(--mute);text-decoration:line-through;text-decoration-color:rgba(255,74,61,.6)}
-.sentrow{margin-top:6px}.meta{font-size:14px;color:#ddd}.reply{font-size:14px;color:var(--ok)}
+.card{display:flex;flex-direction:column}.card footer{margin-top:auto;padding-top:12px}.st{min-height:4.65em}.media{height:400px;margin-top:12px;border-radius:12px;background:#000;overflow:hidden;display:grid;place-items:center}.media video{height:400px;width:225px;max-width:100%;max-height:none;margin:0;border-radius:0;object-fit:contain}.media.empty{background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px);border:1px dashed rgba(255,255,255,.12);color:var(--mute)}.cap{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:#ddd;margin-top:6px;min-height:1.6em}details{margin-top:14px;font-size:14px}summary{cursor:pointer;color:var(--mute);font-weight:500}.sentrow{margin-top:6px}.meta{font-size:14px;color:#ddd}.reply{font-size:14px;color:var(--ok)}
 video{display:block;width:100%;max-height:440px;border-radius:10px;margin-top:8px;background:#000;object-fit:contain}
 a{color:var(--red);font-weight:700}
 footer{margin-top:12px;font-size:12px;color:var(--mute)}
@@ -80,7 +80,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
 <section class="hero">
   <div class="note"><b>שס</b><span>התאחדות הספרדים<br>שומרי תורה</span></div>
   <div><h1>חדר המצב<br><em>לא מתפשרים.</em></h1>
-  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 18/10 15:08</div></div>
+  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 18/10 15:13</div></div>
 </section>
 <section class="clock" id="clock">
   <div class="lbl">עד שהקלפיות נפתחות · <b>יום שלישי, 27.10 בשעה 07:00</b></div>
@@ -103,9 +103,10 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <p class="st">הלקוח אישר את הגרסה האחרונה (טיוטה 37) וביקש להתקדם לסרטון הבא.</p>
   <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 37</b></div>
   <div><small>הכדור אצל</small><b>-</b></div></div>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v1-1018-1307.mp4#t=0.1"></video></div><div class="cap"><span>נשלח ללקוח · <b>18/10 13:07</b> גרסה מהודקת (קצב ומסרים)</span><a href="files/v1-1018-1307.mp4" download>הורדה</a></div><div class="reply">הלקוח: אושר, ממשיכים לסרטון הבא</div>
   
   <h3>תוקן לאחרונה</h3><ul class="done"><li>פתק ש״ס נוחת במכה בסיום</li><li>הקלטות &#x27;קול לגימל&#x27; ו&#x27;כדברי הרבי&#x27; אושרו</li><li>מיקס שמע נוקה מחורים וקליקים</li></ul>
-  <h3>נשלח ללקוח</h3><div class="sentrow"><div class="meta"><b>18/10 13:07</b> גרסה מהודקת (קצב ומסרים) <a href="files/v1-1018-1307.mp4" download>הורדה</a></div><div class="reply">הלקוח: אושר, ממשיכים לסרטון הבא</div><video controls playsinline preload="metadata" src="files/v1-1018-1307.mp4#t=0.1"></video></div>
+  
   <footer>עודכן 18/10 13:59</footer>
 </article>
 <article class="card fix">
@@ -113,9 +114,10 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <p class="st">נבנית גרסה חדשה בסגנון טיוטה 37; ממתינה לאישור הקלטות הקריינות לפני המשך.</p>
   <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסה 20</b></div>
   <div><small>הכדור אצל</small><b>חוה</b></div></div>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v2-1016-1651.mp4#t=0.1"></video></div><div class="cap"><span>נשלח ללקוח · <b>16/10 16:51</b> גרסה בלי פתיחת יהדות התורה</span><a href="files/v2-1016-1651.mp4" download>הורדה</a></div>
   <h3>מה צריך תיקון</h3><ul class="fix"><li>אישור הקלטות: שלוש השלמויות והסיום</li><li>הרבי במסך מלא מיד אחרי הפתיחה</li><li>כל שלמות כ-3 שניות עם הוכחה אחת</li><li>דרעי על נתניהו נשאר, והכניסה שלו חדה</li><li>בחירת כתיב אחד: שלמות או שלימות</li><li>סיום עם פתק ש״ס במכה, בלי פס רץ</li></ul>
   <h3>תוקן לאחרונה</h3><ul class="done"><li>הקלטת פתיחה עם פּ ברורה ב״בקלפי״ אושרה</li><li>הסרטון מתחיל מ״בואו רגע ניישר קו״</li><li>חצי שנייה שקט בפתיחה</li></ul>
-  <h3>נשלח ללקוח</h3><div class="sentrow"><div class="meta"><b>16/10 16:51</b> גרסה בלי פתיחת יהדות התורה <a href="files/v2-1016-1651.mp4" download>הורדה</a></div><video controls playsinline preload="metadata" src="files/v2-1016-1651.mp4#t=0.1"></video></div>
+  
   <footer>עודכן 18/10 14:45</footer>
 </article>
 <article class="card fix">
@@ -123,9 +125,10 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <p class="st">טיוטה 28 בסגנון הסדרה נשלחה לצוות; מחכה לתגובת חוה והחלטות על כיוון.</p>
   <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 28</b></div>
   <div><small>הכדור אצל</small><b>חוה</b></div></div>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v3-1018-0905.mp4#t=0.1"></video></div><div class="cap"><span>נשלח ללקוח · <b>18/10 09:05</b> גרסה עם מכתב הרב יצחק יוסף</span><a href="files/v3-1018-0905.mp4" download>הורדה</a></div>
   <h3>מה צריך תיקון</h3><ul class="fix"><li>יותר תנועה, שהסרטון לא יהיה סטטי</li><li>להחזיר את בית המקדש בפתיחה</li><li>הפטיש לא יסתיר את המילים</li><li>לבחור משפט מתאים יותר מההרצאה של דרעי</li><li>בדיקת נוסח חותמת הרבי מול המקור</li><li>להחליט: בסיס טיוטה 27 או 28</li></ul>
   <h3>תוקן לאחרונה</h3><ul class="done"><li>הקלטות בית הדין, הרב יוסף והשיא אושרו</li><li>הציטוט השני של הרבי ירד</li><li>ההדגשות במכתבים תוקנו</li></ul>
-  <h3>נשלח ללקוח</h3><div class="sentrow"><div class="meta"><b>18/10 09:05</b> גרסה עם מכתב הרב יצחק יוסף <a href="files/v3-1018-0905.mp4" download>הורדה</a></div><video controls playsinline preload="metadata" src="files/v3-1018-0905.mp4#t=0.1"></video></div><div class="sentrow"><div class="meta"><b>17/10 23:50</b> גרסה מתוקנת בלי ״הפתק של ש״ס״ בקריינות <a href="files/v3-1017-2350.mp4" download>הורדה</a></div><div class="reply">הלקוח: הערות קוליות על מסך בית הדין: אותיות וקול גדולים וחזקים יותר, עם פטיש</div></div><div class="sentrow"><div class="meta"><b>17/10 23:39</b> גרסה סופית (טיוטה 12) <a href="files/v3-1017-2339.mp4" download>הורדה</a></div><div class="reply">הלקוח: הערה: להסיר את ״הפתק של ש״ס״ מהקריינות בסוף</div></div>
+  <details><summary>גרסאות קודמות שנשלחו ללקוח (2)</summary><div class="sentrow"><div class="meta"><b>17/10 23:50</b> גרסה מתוקנת בלי ״הפתק של ש״ס״ בקריינות <a href="files/v3-1017-2350.mp4" download>הורדה</a></div><div class="reply">הלקוח: הערות קוליות על מסך בית הדין: אותיות וקול גדולים וחזקים יותר, עם פטיש</div></div><div class="sentrow"><div class="meta"><b>17/10 23:39</b> גרסה סופית (טיוטה 12) <a href="files/v3-1017-2339.mp4" download>הורדה</a></div><div class="reply">הלקוח: הערה: להסיר את ״הפתק של ש״ס״ מהקריינות בסוף</div></div></details>
   <footer>עודכן 18/10 14:45</footer>
 </article>
 <article class="card review">
@@ -133,9 +136,10 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <p class="st">טיוטה 13 קצרה (47 שניות) מוכנה, עם רצועת מוזיקה D; ממתינה להערות.</p>
   <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 13</b></div>
   <div><small>הכדור אצל</small><b>חוה</b></div></div>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v4-1017-2339.mp4#t=0.1"></video></div><div class="cap"><span>נשלח ללקוח · <b>17/10 23:39</b> גרסה סופית (טיוטה 11, 79 שניות)</span><a href="files/v4-1017-2339.mp4" download>הורדה</a></div>
   <h3>מה צריך תיקון</h3><ul class="fix"><li>לבדוק שהלב לא מסתיר את ״מכירה טובה״</li><li>לשלב את דבריו של דרעי על הרבי כמנהיג גדול</li></ul>
   <h3>תוקן לאחרונה</h3><ul class="done"><li>פתיחה חדשה על 770 עם דרעי</li><li>הרב ירוסלבסקי: רק המשפט המרכזי</li><li>בלי הברכה הארוכה, פתק ש״ס נוחת בסיום</li></ul>
-  <h3>נשלח ללקוח</h3><div class="sentrow"><div class="meta"><b>17/10 23:39</b> גרסה סופית (טיוטה 11, 79 שניות) <a href="files/v4-1017-2339.mp4" download>הורדה</a></div><video controls playsinline preload="metadata" src="files/v4-1017-2339.mp4#t=0.1"></video></div>
+  
   <footer>עודכן 18/10 14:38</footer>
 </article>
 <article class="card draft">
@@ -143,6 +147,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <p class="st">סקיצה ראשונה (45 שניות) מוכנה; נדרשים תיקוני הגייה ואנימציה בפתיחה.</p>
   <div class="facts"><div><small>טיוטה אחרונה</small><b>סקיצה 1</b></div>
   <div><small>הכדור אצל</small><b>חוה</b></div></div>
+  <div class="media empty"><span>עוד אין סרטון</span></div><div class="cap"><span>&nbsp;</span></div>
   <h3>מה צריך תיקון</h3><ul class="fix"><li>אנימציה בפתיחה ״הוא חזר מקבוצה״ בסגנון החסיד בקלפי</li><li>תיקון הגייה בקריינות, ממתינים למילים המדויקות</li><li>קטע התמימים: ויזואל מתאים, דרוש אישור ליצירת תמונה</li><li>בחירה בין הקלטה 5א ל-5ב</li><li>להשלים סימון קטעי סמוטריץ׳ וקרדיטים</li></ul>
   <h3>תוקן לאחרונה</h3><ul class="done"><li>הקלטת ״תומים״ במלעיל</li><li>סיום מעודכן: ״הרבי אמר…״</li><li>בדיקת הגזירים מול הכתבות המקוריות</li></ul>
   
@@ -153,9 +158,10 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <p class="st">גרסה של חוה (27 שניות). עוד לא מאושר, יש תיקונים מצידנו.</p>
   <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסה מ-18/10</b></div>
   <div><small>הכדור אצל</small><b>חוה</b></div></div>
+  <div class="media"><video controls playsinline preload="metadata" src="files/jingle-1018-1444.mp4#t=0.1"></video></div><div class="cap"><span>גרסה אחרונה · <b>18/10 14:44</b> הג׳ינגל של חוה, לפני תיקונים</span><a href="files/jingle-1018-1444.mp4" download>הורדה</a></div>
   
   
-  <h3>גרסה אחרונה</h3><div class="sentrow"><div class="meta"><b>18/10 14:44</b> הג׳ינגל של חוה, לפני תיקונים <a href="files/jingle-1018-1444.mp4" download>הורדה</a></div><video controls playsinline preload="metadata" src="files/jingle-1018-1444.mp4#t=0.1"></video></div>
+  
   <footer>עודכן 18/10 15:05</footer>
 </article></main>
 <div class="foot">הדף מתעדכן אוטומטית מקבוצות העבודה</div>
