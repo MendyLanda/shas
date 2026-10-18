@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0c0005">
+<title>ש״ס · חדר המצב</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0005;--wine:#3A0716;--red:#FF4A3D;--red2:#d8392e;--paper:#f4f1ea;--ink:#f4f1ea;--mute:#a99d98;--line:rgba(255,74,61,.22);
+--ok:#4ade80;--sent:#60a5fa;--review:#fbbf24;--fix:#FF4A3D;--draft:#a8a29e;--wait:#c084fc}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--ink);font:16px/1.55 Rubik,system-ui,sans-serif;min-height:100vh;overflow-x:hidden;
+background:radial-gradient(60vw 50vw at 85% -5%,#5a0b1f 0,transparent 60%),radial-gradient(50vw 40vw at 0% 40%,#2a0510 0,transparent 70%),var(--bg)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;z-index:0;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.ghost{position:fixed;left:-4vw;bottom:-8vw;font:900 42vw/1 Rubik;color:transparent;-webkit-text-stroke:2px rgba(255,74,61,.07);pointer-events:none;z-index:0;user-select:none}
+.wrap{position:relative;z-index:1;max-width:1180px;margin:auto;padding:28px 20px 60px}
+.neon{position:absolute;inset:0 0 auto 0;height:260px;pointer-events:none;z-index:0}
+.neon path{fill:none;stroke:var(--red);stroke-width:3;filter:drop-shadow(0 0 6px var(--red)) drop-shadow(0 0 18px var(--red2));
+stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 2.4s cubic-bezier(.65,0,.35,1) .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin:8px 0 26px}
+.note{width:150px;aspect-ratio:3/4;background:var(--paper);color:#111;border-radius:3px;transform:rotate(-4deg);
+box-shadow:0 18px 40px rgba(0,0,0,.6),0 2px 0 rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.note b{font:900 66px/1 Rubik;letter-spacing:-.02em}
+.note span{font-size:11px;font-weight:500;text-align:center;line-height:1.35;margin-top:10px}
+.note::after{content:"";position:absolute;top:-12px;right:22px;width:64px;height:22px;background:rgba(240,230,210,.55);transform:rotate(8deg)}
+h1{font:900 clamp(40px,7vw,76px)/1 Rubik;margin:0;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--red);text-shadow:0 0 18px rgba(255,74,61,.55)}
+.tag{color:var(--mute);margin-top:10px;font-size:15px}
+.clock{border:1px solid var(--line);background:linear-gradient(180deg,rgba(58,7,22,.75),rgba(12,0,5,.75));border-radius:18px;padding:18px 18px 16px;margin-bottom:18px;text-align:center;position:relative;overflow:hidden}
+.clock .lbl{font-weight:700;letter-spacing:.02em;color:var(--mute)}
+.clock .lbl b{color:var(--ink)}
+.digits{display:flex;justify-content:center;gap:clamp(8px,2.4vw,22px);margin:10px 0 4px;direction:rtl}
+.u{min-width:clamp(62px,15vw,128px)}
+.u .n{display:block;font:900 clamp(44px,10vw,96px)/1 Rubik;font-variant-numeric:tabular-nums;color:var(--red);text-shadow:0 0 14px rgba(255,74,61,.7),0 0 40px rgba(255,74,61,.35)}
+.u small{color:var(--mute);font-weight:500}
+.sep{font:900 clamp(36px,8vw,80px)/1 Rubik;color:rgba(255,74,61,.4);align-self:flex-start;padding-top:4px}
+.clock.hot{animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 1px var(--red),0 0 40px rgba(255,74,61,.35) inset}}
+.u.sec .n{animation:tick 1s steps(1) infinite}
+@keyframes tick{0%{opacity:1}85%{opacity:.55}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.stat{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:rgba(20,18,18,.6)}
+.stat b{font:900 34px/1 Rubik;display:block}.stat small{color:var(--mute)}
+.bar{height:10px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin:6px 0 4px}
+.bar i{display:block;height:100%;width:10%;background:var(--red);box-shadow:0 0 12px var(--red);border-radius:99px}
+.notes{border-inline-start:4px solid var(--red);background:rgba(255,74,61,.08);border-radius:10px;padding:10px 16px;margin:18px 0}
+.notes ul{margin:0;padding-inline-start:18px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+.card{position:relative;background:rgba(20,18,18,.82);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:18px;box-shadow:0 14px 30px rgba(0,0,0,.35);
+border-top:3px solid var(--c);backdrop-filter:blur(4px)}
+.ok{--c:var(--ok)}.sent{--c:var(--sent)}.review{--c:var(--review)}.fix{--c:var(--fix)}.draft{--c:var(--draft)}.wait{--c:var(--wait)}
+.card header{display:flex;align-items:center;gap:10px}
+.num{font:900 30px/1 Rubik;color:var(--c);min-width:26px}
+h2{font:900 22px/1.1 Rubik;margin:0;flex:1}
+.pill{font-size:13px;font-weight:700;color:var(--c);border:1px solid var(--c);padding:2px 10px;border-radius:999px;white-space:nowrap}
+.st{margin:10px 0 12px;color:#e8e1dc}
+.facts{display:flex;gap:26px;padding:10px 0;border-block:1px dashed rgba(255,255,255,.1)}
+.facts small{display:block;color:var(--mute);font-size:12px}
+h3{font-size:13px;color:var(--red);margin:14px 0 4px;font-weight:700;letter-spacing:.02em}
+ul{margin:0;padding-inline-start:20px}li{margin:3px 0}
+.fix li::marker{color:var(--red)}
+.done li{color:var(--mute);text-decoration:line-through;text-decoration-color:rgba(255,74,61,.6)}
+.sentrow{margin-top:6px}.meta{font-size:14px;color:#ddd}.reply{font-size:14px;color:var(--ok)}
+video{display:block;width:100%;max-height:440px;border-radius:10px;margin-top:8px;background:#000;object-fit:contain}
+a{color:var(--red);font-weight:700}
+footer{margin-top:12px;font-size:12px;color:var(--mute)}
+.stamp{position:absolute;top:14px;left:-6px;background:var(--paper);color:#111;font:900 15px/1 Rubik;padding:7px 12px;transform:rotate(-6deg);box-shadow:0 6px 14px rgba(0,0,0,.5)}
+.card.ok .pill{display:none}
+.foot{margin-top:30px;color:var(--mute);font-size:13px;text-align:center}
+@media (max-width:640px){.hero{grid-template-columns:1fr;justify-items:center;text-align:center}.note{width:110px}.note b{font-size:48px}.stats{gap:8px}.stat b{font-size:26px}.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.neon path{stroke-dashoffset:0}}
+</style></head><body>
+<div class="ghost" aria-hidden="true">ש״ס</div>
+<svg class="neon" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true"><path d="M1210 40 C 1000 40, 980 150, 760 150 S 420 60, 260 120 S 60 230, -10 210"/></svg>
+<div class="wrap">
+<section class="hero">
+  <div class="note"><b>שס</b><span>התאחדות הספרדים<br>שומרי תורה</span></div>
+  <div><h1>חדר המצב<br><em>לא מתפשרים.</em></h1>
+  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 18/10 14:53</div></div>
+</section>
+<section class="clock" id="clock">
+  <div class="lbl">עד שהקלפיות נפתחות · <b>יום שלישי, 27.10 בשעה 07:00</b></div>
+  <div class="digits">
+    <div class="u"><span class="n" id="d">--</span><small>ימים</small></div><span class="sep">:</span>
+    <div class="u"><span class="n" id="h">--</span><small>שעות</small></div><span class="sep">:</span>
+    <div class="u"><span class="n" id="m">--</span><small>דקות</small></div><span class="sep">:</span>
+    <div class="u sec"><span class="n" id="s">--</span><small>שניות</small></div>
+  </div>
+</section>
+<section class="stats">
+  <div class="stat"><b>1<small style="font-size:16px"> / 10</small></b><div class="bar"><i></i></div><small>אושרו ע״י הלקוח</small></div>
+  <div class="stat"><b>4</b><small>סרטונים שנשלחו ללקוח</small></div>
+  <div class="stat"><b style="color:var(--red)">19</b><small>תיקונים פתוחים</small></div>
+</section>
+<section class="notes"><ul><li>סרטונים 2 ו-3 נשלחו ללקוח וממתינים לתגובה על הגרסאות העדכניות</li><li>מהפגישה: סרטון לנשים, סרטון על הרב יצחק יוסף, ג׳ינגל ושני תסריטים חדשים עדיין לא התחילו</li><li>הבאנר עדיין לא הוזכר בשיחות</li></ul></section>
+<main class="grid">
+<article class="card ok"><div class="stamp">אושר</div>
+  <header><span class="num">1</span><h2>הצלה</h2><span class="pill">אושר</span></header>
+  <p class="st">הלקוח אישר את הגרסה האחרונה (טיוטה 37) וביקש להתקדם לסרטון הבא.</p>
+  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 37</b></div>
+  <div><small>הכדור אצל</small><b>-</b></div></div>
+  
+  <h3>תוקן לאחרונה</h3><ul class="done"><li>פתק ש״ס נוחת במכה בסיום</li><li>הקלטות &#x27;קול לגימל&#x27; ו&#x27;כדברי הרבי&#x27; אושרו</li><li>מיקס שמע נוקה מחורים וקליקים</li></ul>
+  <h3>נשלח ללקוח</h3><div class="sentrow"><div class="meta"><b>18/10 13:07</b> גרסה מהודקת (קצב ומסרים) <a href="files/v1-1018-1307.mp4" download>הורדה</a></div><div class="reply">הלקוח: אושר, ממשיכים לסרטון הבא</div><video controls playsinline preload="metadata" src="files/v1-1018-1307.mp4#t=0.1"></video></div><div class="sentrow"><div class="meta"><b>16/10 15:51</b> אופציה ב׳ <a href="files/v1-1016-1551.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>16/10 15:33</b> אופציה א׳ (עם הציונות הדתית) <a href="files/v1-1016-1533.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>15/10 07:46</b> כיוון ראשוני לסרטון <a href="files/v1-1015-0746.mp4" download>הורדה</a></div><div class="reply">הלקוח: הערות: מוזיקת רקע לאורך כל הסרטון, מנגינה חב״דית בחלק השני, חיתוך אחרי ה״כן״, ו״חרדית ביותר״ בלי ה׳ בשנייה 23</div></div>
+  <footer>עודכן 18/10 13:59</footer>
+</article>
+<article class="card fix">
+  <header><span class="num">2</span><h2>הקו של הרבי</h2><span class="pill">בתיקונים</span></header>
+  <p class="st">נבנית גרסה חדשה בסגנון טיוטה 37; ממתינה לאישור הקלטות הקריינות לפני המשך.</p>
+  <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסה 20</b></div>
+  <div><small>הכדור אצל</small><b>מושקי</b></div></div>
+  <h3>מה צריך תיקון</h3><ul class="fix"><li>אישור הקלטות: שלוש השלמויות והסיום</li><li>הרבי במסך מלא מיד אחרי הפתיחה</li><li>כל שלמות כ-3 שניות עם הוכחה אחת</li><li>דרעי על נתניהו נשאר, והכניסה שלו חדה</li><li>בחירת כתיב אחד: שלמות או שלימות</li><li>סיום עם פתק ש״ס במכה, בלי פס רץ</li></ul>
+  <h3>תוקן לאחרונה</h3><ul class="done"><li>הקלטת פתיחה עם פּ ברורה ב״בקלפי״ אושרה</li><li>הסרטון מתחיל מ״בואו רגע ניישר קו״</li><li>חצי שנייה שקט בפתיחה</li></ul>
+  <h3>נשלח ללקוח</h3><div class="sentrow"><div class="meta"><b>16/10 16:51</b> גרסה בלי פתיחת יהדות התורה <a href="files/v2-1016-1651.mp4" download>הורדה</a></div><video controls playsinline preload="metadata" src="files/v2-1016-1651.mp4#t=0.1"></video></div>
+  <footer>עודכן 18/10 14:45</footer>
+</article>
+<article class="card fix">
+  <header><span class="num">3</span><h2>מה הרבי היה אומר</h2><span class="pill">בתיקונים</span></header>
+  <p class="st">טיוטה 28 בסגנון הסדרה נשלחה לצוות; מחכה לתגובת חוה והחלטות על כיוון.</p>
+  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 28</b></div>
+  <div><small>הכדור אצל</small><b>חוה</b></div></div>
+  <h3>מה צריך תיקון</h3><ul class="fix"><li>יותר תנועה, שהסרטון לא יהיה סטטי</li><li>להחזיר את בית המקדש בפתיחה</li><li>הפטיש לא יסתיר את המילים</li><li>לבחור משפט מתאים יותר מההרצאה של דרעי</li><li>בדיקת נוסח חותמת הרבי מול המקור</li><li>להחליט: בסיס טיוטה 27 או 28</li></ul>
+  <h3>תוקן לאחרונה</h3><ul class="done"><li>הקלטות בית הדין, הרב יוסף והשיא אושרו</li><li>הציטוט השני של הרבי ירד</li><li>ההדגשות במכתבים תוקנו</li></ul>
+  <h3>נשלח ללקוח</h3><div class="sentrow"><div class="meta"><b>18/10 09:05</b> גרסה עם מכתב הרב יצחק יוסף <a href="files/v3-1018-0905.mp4" download>הורדה</a></div><video controls playsinline preload="metadata" src="files/v3-1018-0905.mp4#t=0.1"></video></div><div class="sentrow"><div class="meta"><b>17/10 23:50</b> גרסה מתוקנת בלי ״הפתק של ש״ס״ בקריינות <a href="files/v3-1017-2350.mp4" download>הורדה</a></div><div class="reply">הלקוח: הערות קוליות על מסך בית הדין: אותיות וקול גדולים וחזקים יותר, עם פטיש</div></div><div class="sentrow"><div class="meta"><b>17/10 23:39</b> גרסה סופית (טיוטה 12) <a href="files/v3-1017-2339.mp4" download>הורדה</a></div><div class="reply">הלקוח: הערה: להסיר את ״הפתק של ש״ס״ מהקריינות בסוף</div></div>
+  <footer>עודכן 18/10 14:45</footer>
+</article>
+<article class="card review">
+  <header><span class="num">4</span><h2>הידידות</h2><span class="pill">מחכה לאישור</span></header>
+  <p class="st">טיוטה 13 קצרה (47 שניות) מוכנה, עם רצועת מוזיקה D; ממתינה להערות.</p>
+  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 13</b></div>
+  <div><small>הכדור אצל</small><b>מושקי</b></div></div>
+  <h3>מה צריך תיקון</h3><ul class="fix"><li>לבדוק שהלב לא מסתיר את ״מכירה טובה״</li><li>לשלב את דבריו של דרעי על הרבי כמנהיג גדול</li></ul>
+  <h3>תוקן לאחרונה</h3><ul class="done"><li>פתיחה חדשה על 770 עם דרעי</li><li>הרב ירוסלבסקי: רק המשפט המרכזי</li><li>בלי הברכה הארוכה, פתק ש״ס נוחת בסיום</li></ul>
+  <h3>נשלח ללקוח</h3><div class="sentrow"><div class="meta"><b>17/10 23:39</b> גרסה סופית (טיוטה 11, 79 שניות) <a href="files/v4-1017-2339.mp4" download>הורדה</a></div><video controls playsinline preload="metadata" src="files/v4-1017-2339.mp4#t=0.1"></video></div>
+  <footer>עודכן 18/10 14:38</footer>
+</article>
+<article class="card draft">
+  <header><span class="num">5</span><h2>בדרך לרבי</h2><span class="pill">בבנייה</span></header>
+  <p class="st">סקיצה ראשונה (45 שניות) מוכנה; נדרשים תיקוני הגייה ואנימציה בפתיחה.</p>
+  <div class="facts"><div><small>טיוטה אחרונה</small><b>סקיצה 1</b></div>
+  <div><small>הכדור אצל</small><b>מושקי</b></div></div>
+  <h3>מה צריך תיקון</h3><ul class="fix"><li>אנימציה בפתיחה ״הוא חזר מקבוצה״ בסגנון החסיד בקלפי</li><li>תיקון הגייה בקריינות, ממתינים למילים המדויקות</li><li>קטע התמימים: ויזואל מתאים, דרוש אישור ליצירת תמונה</li><li>בחירה בין הקלטה 5א ל-5ב</li><li>להשלים סימון קטעי סמוטריץ׳ וקרדיטים</li></ul>
+  <h3>תוקן לאחרונה</h3><ul class="done"><li>הקלטת ״תומים״ במלעיל</li><li>סיום מעודכן: ״הרבי אמר…״</li><li>בדיקת הגזירים מול הכתבות המקוריות</li></ul>
+  
+  <footer>עודכן 18/10 14:38</footer>
+</article></main>
+<div class="foot">הדף מתעדכן אוטומטית מקבוצות העבודה</div>
+</div>
+<script>
+const T=new Date("2026-10-27T07:00:00+02:00").getTime(),p=n=>String(n).padStart(2,"0"),$=id=>document.getElementById(id);
+function tick(){let r=Math.max(0,T-Date.now());const d=Math.floor(r/864e5);r%=864e5;const h=Math.floor(r/36e5);r%=36e5;
+$("d").textContent=d;$("h").textContent=p(h);$("m").textContent=p(Math.floor(r/6e4));$("s").textContent=p(Math.floor(r%6e4/1e3));
+$("clock").classList.toggle("hot",T-Date.now()<72*36e5)}
+tick();setInterval(tick,1000);
+setTimeout(()=>{if([...document.querySelectorAll("video")].every(v=>v.paused))location.reload()},300000);
+</script>
+</body></html>
