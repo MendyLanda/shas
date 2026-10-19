@@ -80,7 +80,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
 <section class="hero">
   <div class="note"><b>שס</b><span>התאחדות הספרדים<br>שומרי תורה</span></div>
   <div><h1>חדר המצב<br><em>לא מתפשרים.</em></h1>
-  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 19/10 12:39</div></div>
+  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 19/10 17:41</div></div>
 </section>
 <section class="clock" id="clock">
   <div class="lbl">עד שהקלפיות נפתחות · <b>יום שלישי, 27.10 בשעה 07:00</b></div>
@@ -183,6 +183,5 @@ function tick(){let r=Math.max(0,T-Date.now());const d=Math.floor(r/864e5);r%=86
 $("d").textContent=d;$("h").textContent=p(h);$("m").textContent=p(Math.floor(r/6e4));$("s").textContent=p(Math.floor(r%6e4/1e3));
 $("clock").classList.toggle("hot",T-Date.now()<72*36e5)}
 tick();setInterval(tick,1000);
-setTimeout(()=>{if([...document.querySelectorAll("video")].every(v=>v.paused))location.reload()},300000);
 </script>
 </body></html>
