@@ -70,6 +70,9 @@ a{color:var(--red);font-weight:700}
 footer{margin-top:12px;font-size:12px;color:var(--mute)}
 .stamp{position:absolute;top:14px;left:-6px;background:var(--paper);color:#111;font:900 15px/1 Rubik;padding:7px 12px;transform:rotate(-6deg);box-shadow:0 6px 14px rgba(0,0,0,.5)}
 .card.ok .pill{display:none}
+.card footer{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.approve{color:var(--ok);border:1px solid var(--ok);border-radius:999px;padding:5px 14px;font-size:13px;text-decoration:none;white-space:nowrap}
+.approve:hover{background:rgba(74,222,128,.12)}
 .foot{margin-top:30px;color:var(--mute);font-size:13px;text-align:center}
 @media (max-width:640px){.hero{grid-template-columns:1fr;justify-items:center;text-align:center}.note{width:110px}.note b{font-size:48px}.stats{gap:8px}.stat b{font-size:26px}.grid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}.neon path{stroke-dashoffset:0}}
@@ -80,7 +83,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
 <section class="hero">
   <div class="note"><b>שס</b><span>התאחדות הספרדים<br>שומרי תורה</span></div>
   <div><h1>חדר המצב<br><em>לא מתפשרים.</em></h1>
-  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 19/10 19:15</div></div>
+  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 19/10 19:19</div></div>
 </section>
 <section class="clock" id="clock">
   <div class="lbl">עד שהקלפיות נפתחות · <b>יום שלישי, 27.10 בשעה 07:00</b></div>
@@ -107,7 +110,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   
   <h3>תוקן לאחרונה</h3><ul class="done"><li>סיום ״בקו של הרבי״ עם ההקלטה המאושרת מהפתיחה</li><li>מלכיאלי מהקטע המקורי, מסונכרן לקול</li><li>פתיחה בעיצוב כמו סרטון 1 ושקף ״להילחם״ מעוצב מחדש</li></ul>
   <details><summary>נשלח ללקוח (1)</summary><div class="sentrow"><div class="meta"><b>16/10 16:51</b> גרסה בלי יהדות התורה, עם הצעה לזום במוצאי שבת <a href="files/v2-1016-1651.mp4" download>הורדה</a></div></div></details>
-  <footer>עודכן 19/10 18:48</footer>
+  <footer>עודכן 19/10 18:48<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A7%D7%95%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%91%D7%99%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
 </article>
 <article class="card fix">
   <header><span class="num">5</span><h2>בדרך לרבי</h2><span class="pill">בתיקונים</span></header>
@@ -118,7 +121,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <h3>מה צריך תיקון</h3><ul class="fix"><li>אישור הגייה, בעיקר ״קְבוּצֶה״ (מלרע או מלעיל)</li><li>אנימציית תמים לומד לקטע ״תמים״</li><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li></ul>
   <h3>תוקן לאחרונה</h3><ul class="done"><li>הלוגו ושורת זכויות היוצרים חזרו לתחתית המסך</li><li>תגיות לא יושבות על הכיפה, הכול מחוץ לשוליים</li><li>כרטיס סיום עומד 2 שניות ודאקינג מתחת לקריין</li></ul>
   
-  <footer>עודכן 19/10 09:51</footer>
+  <footer>עודכן 19/10 09:51<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%91%D7%93%D7%A8%D7%9A%20%D7%9C%D7%A8%D7%91%D7%99%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
 </article>
 <article class="card review">
   <header><span class="num">·</span><h2>ג׳ינגל</h2><span class="pill">מחכה לאישור</span></header>
@@ -129,7 +132,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <h3>מה צריך תיקון</h3><ul class="fix"><li>בדיקת סנכרון המילים לשירה</li><li>להוריד את הלוגו ושורת זכויות היוצרים לתחתית המסך</li><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li></ul>
   <h3>תוקן לאחרונה</h3><ul class="done"><li>״מִפְלָגָה חֲרֵדִית בְּיוֹתֵר!״ ענק ומנוקד בשני המופעים</li><li>סאונד איכותי מהקובץ המקורי</li><li>טקסט מחוץ לשוליים וכרטיס סיום עומד 2 שניות</li></ul>
   <details><summary>נשלח ללקוח (1)</summary><div class="sentrow"><div class="meta"><b>18/10 16:18</b> הג׳ינגל לפני הידוק, לקבלת הערות על השיר <a href="files/jingle-1018-1618.mp4" download>הורדה</a></div><div class="reply">הלקוח: הלקוח: צריך יותר מזה</div></div></details>
-  <footer>עודכן 19/10 13:45</footer>
+  <footer>עודכן 19/10 13:45<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%92%D7%B3%D7%99%D7%A0%D7%92%D7%9C%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
 </article>
 <article class="card fix">
   <header><span class="num">·</span><h2>חסיד חב״ד מצביע ש״ס (14 שניות)</h2><span class="pill">בתיקונים</span></header>
@@ -140,7 +143,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <h3>מה צריך תיקון</h3><ul class="fix"><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li></ul>
   <h3>תוקן לאחרונה</h3><ul class="done"><li>הלוגו ושורת זכויות היוצרים חזרו לתחתית המסך</li><li>פריים ראשון קריא עם ״חסיד חב״ד״</li><li>כרטיס סיום עומד 2.3 שניות ודאקינג לקריין</li></ul>
   
-  <footer>עודכן 19/10 09:51</footer>
+  <footer>עודכן 19/10 09:51<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%97%D7%A1%D7%99%D7%93%20%D7%97%D7%91%D7%B4%D7%93%20%D7%9E%D7%A6%D7%91%D7%99%D7%A2%20%D7%A9%D7%B4%D7%A1%20%2814%20%D7%A9%D7%A0%D7%99%D7%95%D7%AA%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
 </article>
 <article class="card draft">
   <header><span class="num">·</span><h2>מעצרים ודרישת גיוס (תסריט חדש, מכונה בצוות ״סרטון 5״)</h2><span class="pill">בבנייה</span></header>
@@ -151,7 +154,7 @@ footer{margin-top:12px;font-size:12px;color:var(--mute)}
   <h3>מה צריך תיקון</h3><ul class="fix"><li>לבחור הגייה ל״תמימים״ מבין שתי האופציות החדשות</li><li>להשלים הקלטת קריינות ולהכין טיוטה ראשונה</li></ul>
   <h3>תוקן לאחרונה</h3><ul class="done"><li>תיק התפילין לא נופל, ובלי כיתוב בפריים הראשון</li><li>קריינות הסיום ״ש״ס״ נבחרה (אופציה א)</li></ul>
   
-  <footer>עודכן 19/10 18:57</footer>
+  <footer>עודכן 19/10 18:57<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%9E%D7%A2%D7%A6%D7%A8%D7%99%D7%9D%20%D7%95%D7%93%D7%A8%D7%99%D7%A9%D7%AA%20%D7%92%D7%99%D7%95%D7%A1%20%28%D7%AA%D7%A1%D7%A8%D7%99%D7%98%20%D7%97%D7%93%D7%A9%2C%20%D7%9E%D7%9B%D7%95%D7%A0%D7%94%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%20%D7%B4%D7%A1%D7%A8%D7%98%D7%95%D7%9F%205%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
 </article>
 <article class="card ok"><div class="stamp">אושר</div>
   <header><span class="num">1</span><h2>הצלה</h2><span class="pill">אושר</span></header>
