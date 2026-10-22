@@ -19,7 +19,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Rubik,system-u
 .brand b{background:#fff;color:var(--wine);font:900 18px/1 Rubik;padding:6px 9px;border-radius:6px}
 h1{font:900 clamp(30px,6vw,52px)/1.05 Rubik;margin:18px 0 6px;letter-spacing:-.02em}
 .sub{opacity:.75;margin:0}
-.row{display:grid;grid-template-columns:repeat(3,1fr) 1.6fr;gap:10px;margin-top:22px}
+.row{display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:10px;margin-top:22px}
 .kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 14px}
 .kpi b{display:block;font:900 30px/1 Rubik}.kpi small{opacity:.75}
 .kpi.ok b{color:#6ee7a0}.kpi.wait b{color:#ffb38a}
@@ -47,24 +47,23 @@ h2{margin:0;font:700 19px/1.3 Rubik;display:flex;gap:10px;align-items:flex-start
 .meta a{color:var(--ink);font-weight:700;text-decoration:none}
 .badge{display:flex;align-items:center;gap:10px;background:var(--cb);color:var(--c);border-radius:12px;padding:10px 12px;font-weight:700}
 .badge i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font:900 15px/1 Rubik;font-style:normal}
-.badge span{flex:1}
+.badge span{flex:1}.badge small{display:block;font-weight:500;font-size:13px;opacity:.85}
 .approve{flex:none;background:var(--ok);color:#fff;border:0;border-radius:999px;padding:7px 16px;font:700 14px Rubik;cursor:pointer;text-decoration:none}
 .approve:disabled{opacity:.6;cursor:wait}
 details{font-size:14px;border-top:1px solid var(--line);padding-top:8px}
 summary{cursor:pointer;color:var(--mute);font-weight:500}
 details ul{margin:6px 0 0;padding-inline-start:20px}details li{margin:3px 0}details a{color:var(--ink);font-weight:700}
 .foot{text-align:center;color:var(--mute);font-size:13px;margin-top:36px}
-@media (max-width:760px){.row{grid-template-columns:repeat(3,1fr)}.clock{grid-column:1/-1}.kpi b{font-size:24px}
+@media (max-width:760px){.row{grid-template-columns:1fr 1fr}.clock{grid-column:1/-1}.kpi b{font-size:24px}
 .quiz{flex-wrap:wrap}.quiz .go{margin:0;width:100%;text-align:center}.grid{grid-template-columns:1fr}.media{height:min(560px,130vw)}}
 </style></head><body>
 <header class="top"><div class="in">
   <div class="brand"><b>שס</b>קמפיין הבחירות לבוחרי חב״ד</div>
   <h1>כל סרטוני הקמפיין</h1>
-  <p class="sub">מה אושר, מה מחכה לאישור ומה בעבודה. מתעדכן אוטומטית · עודכן 22/10 13:09</p>
+  <p class="sub">מה אושר ומה מחכה לאישור. מתעדכן אוטומטית · עודכן 22/10 13:15</p>
   <div class="row">
-    <div class="kpi ok"><b>3</b><small>אושרו</small></div>
-    <div class="kpi wait"><b>8</b><small>מחכים לאישור</small></div>
-    <div class="kpi"><b>2</b><small>בעבודה</small></div>
+    <div class="kpi ok"><b>5</b><small>אושרו</small></div>
+    <div class="kpi wait"><b>4</b><small>מחכים לאישור</small></div>
     <div class="kpi clock"><span class="t" id="t">--</span><small>עד פתיחת הקלפיות, 27.10 בשעה 07:00</small></div>
   </div>
 </div></header>
@@ -75,110 +74,60 @@ details ul{margin:6px 0 0;padding-inline-start:20px}details li{margin:3px 0}deta
   <p>מבחן קצר שמוביל למסקנה שש״ס היא הקו של הרבי, ובסופו גלריה של כל הסרטונים</p></div>
   <span class="go">למבחן ←</span>
 </a>
-<section class="sec wait"><div class="sechead"><h3>מחכים לאישור הלקוח <b>8</b></h3><p>נשלחו ללקוח. אפשר לצפות ולאשר</p></div><div class="grid">
+<section class="sec ok"><div class="sechead"><h3>אושרו <b>5</b></h3><p>גרסה סופית, מוכנה להפצה</p></div><div class="grid">
+<article class="card ok" data-key="b-yamin">
+  <h2>מי עומד לימין חב״ד</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v1-1020-1941.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מאושרת מ-20/10</span><a href="files/v1-1020-1941.mp4" download>הורדה ↓</a></div>
+  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
+</article>
+<article class="card ok" data-key="b-kav">
+  <h2>חסיד חב״ד, מי באמת נאמן כיום לקו של הרבי?</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v2-1020-1941.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מאושרת מ-20/10</span><a href="files/v2-1020-1941.mp4" download>הורדה ↓</a></div>
+  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
+</article>
+<article class="card ok" data-key="b-derech">
+  <h2>האם זו הדרך שלנו?</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v3-1020-1941.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מאושרת מ-20/10</span><a href="files/v3-1020-1941.mp4" download>הורדה ↓</a></div>
+  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
+</article>
+<article class="card ok" data-key="b-sos">
+  <h2>SOS - מעצרי התמימים</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v4-1020-1941.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מאושרת מ-20/10 · פורסם</span><a href="files/v4-1020-1941.mp4" download>הורדה ↓</a></div>
+  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
+</article>
+<article class="card ok" data-key="deutsch">
+  <h2>הרב דייטש</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/deutsch-1021-1925.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מאושרת מ-21/10</span><a href="files/deutsch-1021-1925.mp4" download>הורדה ↓</a></div>
+  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
+</article></div></section><section class="sec wait"><div class="sechead"><h3>מחכים לאישור <b>4</b></h3><p>נשלחו ללקוח. אפשר לצפות ולאשר</p></div><div class="grid">
 <article class="card wait" data-key="v2">
-  <h2><span class="num">2</span>הקו של הרבי</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v2-draft-1021-1822.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-21/10 18:22</span><a href="files/v2-draft-1021-1822.mp4" download>הורדה ↓</a></div>
-  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A7%D7%95%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%91%D7%99%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
-  <details><summary>מה בתיקון (2)</summary><ul><li>להחליף את הקלפי בזווית קדמית</li><li>לקבל תגובת הלקוח לטיוטה 10</li></ul></details>
-  <details><summary>גרסאות קודמות (4)</summary><ul><li><a href="files/v2-1021-1822.mp4" download>21/10 18:22</a> טיוטה 10 מקוצרת, בלי שיר</li><li><a href="files/v2-1021-1822.mp4" download>21/10 18:22</a> טיוטה 10 עם ג׳ינגל</li><li><a href="files/v2-1020-1941.mp4" download>20/10 19:41</a> סרטון 2 נשלח שוב בקבוצת הלקוח</li><li><a href="files/v2-1016-1651.mp4" download>16/10 16:51</a> גרסה בלי יהדות התורה, עם הצעה לזום במוצאי שבת</li></ul></details>
-</article>
-<article class="card wait" data-key="jingle">
-  <h2>ג׳ינגל</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/jingle-draft-1019-1342.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-19/10 13:42</span><a href="files/jingle-draft-1019-1342.mp4" download>הורדה ↓</a></div>
-  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%92%D7%B3%D7%99%D7%A0%D7%92%D7%9C%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
-  <details><summary>מה בתיקון (3)</summary><ul><li>בדיקת סנכרון המילים לשירה</li><li>להוריד את הלוגו ושורת זכויות היוצרים לתחתית המסך</li><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li></ul></details>
-  <details><summary>גרסאות קודמות (1)</summary><ul><li><a href="files/jingle-1018-1618.mp4" download>18/10 16:18</a> הג׳ינגל לפני הידוק, לקבלת הערות על השיר</li></ul></details>
-</article>
-<article class="card wait" data-key="smotrich">
-  <h2>ש״ס מול סמוטריץ׳ ובן גביר</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/smotrich-1020-1341.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-20/10 13:41</span><a href="files/smotrich-1020-1341.mp4" download>הורדה ↓</a></div>
-  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%A9%D7%B4%D7%A1%20%D7%9E%D7%95%D7%9C%20%D7%A1%D7%9E%D7%95%D7%98%D7%A8%D7%99%D7%A5%D7%B3%20%D7%95%D7%91%D7%9F%20%D7%92%D7%91%D7%99%D7%A8%20%28%D7%93%D7%97%D7%95%D7%A3%3B%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%20%D7%9E%D7%9B%D7%95%D7%A0%D7%94%20%D7%B4%D7%A1%D7%A8%D7%98%D7%95%D7%9F%205%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
-  <details><summary>מה בתיקון (10)</summary><ul><li>לקבל אישור לתסריט ולהתקדם להפקה דחופה</li><li>לנסח: רבני חב״ד קוראים לשאוב כוח ממסירות נפש</li><li>להוסיף קטע קצר נוסף של בן גביר על גיוס</li><li>להשיג קטע בן גביר על המהפכה שעשה במשטרה</li><li>להוסיף לתסריט זווית אחריות המשטרה: ״שתיקה מול המעצרים - חלק מהפשע״</li><li>להטמיע מכתב הרבנים לבחורי חב״ד, במסירות נפש, בנגטיב</li><li>לשלב צילומי זאל ישיבה חב״די</li><li>להאזין להודעות הקוליות ולהטמיע את ההנחיות</li><li>להשיג קטעי דרעי וסמוטריץ׳ ולוודא שהם נקיים</li><li>לאמת ציטוטי הרבי מול מקור חב״די לפני הכנסתם</li></ul></details>
-  <details><summary>גרסאות קודמות (9)</summary><ul><li><a href="files/smotrich-1020-1942.mp4" download>20/10 19:42</a> סרטון 5 נשלח שוב בקבוצת הלקוח</li><li><a href="files/smotrich-1020-1340.mp4" download>20/10 13:40</a> גרסה מתוקנת נוספת</li><li><a href="files/smotrich-1020-1327.mp4" download>20/10 13:27</a> גרסה מתוקנת נוספת לפי דיוקי הלקוח</li><li><a href="files/smotrich-1020-1327.mp4" download>20/10 13:27</a> גרסה מתוקנת לפי דיוקי הלקוח</li><li><a href="files/smotrich-1020-1311.mp4" download>20/10 13:11</a> גרסה מתוקנת נוספת</li><li><a href="files/smotrich-1020-1310.mp4" download>20/10 13:10</a> גרסה מתוקנת לאחר הערות הלקוח</li><li><a href="files/smotrich-1020-1249.mp4" download>20/10 12:49</a> אופציה נוספת עם הקלטה</li><li><a href="files/smotrich-1020-1246.mp4" download>20/10 12:46</a> אופציה נוספת עם הקלטה</li><li><a href="files/smotrich-1020-1244.mp4" download>20/10 12:44</a> סרטון ראשון בקבוצת הלקוח</li></ul></details>
-</article>
-<article class="card wait" data-key="yosef">
-  <h2>״אין כמו חסידי חב״ד״</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/yosef-draft-1021-1754.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-21/10 17:54</span><a href="files/yosef-draft-1021-1754.mp4" download>הורדה ↓</a></div>
-  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%90%D7%99%D7%9F%20%D7%9B%D7%9E%D7%95%20%D7%97%D7%A1%D7%99%D7%93%D7%99%20%D7%97%D7%91%D7%B4%D7%93%D7%B4%20%28%D7%94%D7%A8%D7%91%20%D7%99%D7%A6%D7%97%D7%A7%20%D7%99%D7%95%D7%A1%D7%A3%20%D7%95%D7%97%D7%91%D7%B4%D7%93%3B%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%20%D7%9E%D7%9B%D7%95%D7%A0%D7%94%20%D7%B4%D7%A1%D7%A8%D7%98%D7%95%D7%9F%206%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
-  <details><summary>מה בתיקון (2)</summary><ul><li>לקבל תגובת הלקוח לטיוטה 15</li><li>להגביר עוד את הקטעים המדברים, אם יתבקש</li></ul></details>
-  <details><summary>גרסאות קודמות (2)</summary><ul><li><a href="files/yosef-1021-1755.mp4" download>21/10 17:55</a> סרטון מרן מתוקן (טיוטה 15), עם קטעים מדברים מוגברים</li><li><a href="files/yosef-1021-1157.mp4" download>21/10 11:57</a> טיוטה 9 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול</li></ul></details>
-</article>
-<article class="card wait" data-key="haredit">
-  <h2>״הרשימה החרדית ביותר״</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/haredit-draft-1021-1911.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-21/10 19:11</span><a href="files/haredit-draft-1021-1911.mp4" download>הורדה ↓</a></div>
-  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%94%D7%A8%D7%A9%D7%99%D7%9E%D7%94%20%D7%94%D7%97%D7%A8%D7%93%D7%99%D7%AA%20%D7%91%D7%99%D7%95%D7%AA%D7%A8%D7%B4%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
-  <details><summary>מה בתיקון (3)</summary><ul><li>לקבל תגובת הלקוח לטיוטה 17</li><li>לשמוע את ״חרדית״ בקריינות; לאשר הקלטות בקול עומר</li><li>לאשר את נוסח הפתיח החיובי</li></ul></details>
-  <details><summary>גרסאות קודמות (4)</summary><ul><li><a href="files/haredit-1021-1913.mp4" download>21/10 19:13</a> טיוטה 17 נשלחה בקבוצת הלקוח (שיוך לפי ההקשר)</li><li><a href="files/haredit-1021-1833.mp4" download>21/10 18:33</a> טיוטה 16 נשלחה בקבוצת הלקוח (שיוך לפי ההקשר)</li><li><a href="files/haredit-1021-1802.mp4" download>21/10 18:02</a> סרטון נשלח בקבוצת הלקוח כסרטון שהתבקש להפוך לחיובי; בוצעה שליחה מחדש עקב תקלה</li><li><a href="files/haredit-1021-1157.mp4" download>21/10 11:57</a> טיוטה 7 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול</li></ul></details>
+  <h2>הקו של הרבי</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v2-1021-182227.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10</span><a href="files/v2-1021-182227.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור סופי<small>אחרי התיקונים של מענדי קורטס</small></span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A7%D7%95%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%91%D7%99%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
 </article>
 <article class="card wait" data-key="mi-anachnu">
-  <h2>״מי אנחנו״ (יחס הרבי לכהנא ובחירה בקלפי)</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/mi-anachnu-draft-1021-1753.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-21/10 17:53</span><a href="files/mi-anachnu-draft-1021-1753.mp4" download>הורדה ↓</a></div>
-  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%9E%D7%99%20%D7%90%D7%A0%D7%97%D7%A0%D7%95%D7%B4%20%28%D7%99%D7%97%D7%A1%20%D7%94%D7%A8%D7%91%D7%99%20%D7%9C%D7%9B%D7%94%D7%A0%D7%90%20%D7%95%D7%91%D7%97%D7%99%D7%A8%D7%94%20%D7%91%D7%A7%D7%9C%D7%A4%D7%99%29%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
-  <details><summary>מה בתיקון (4)</summary><ul><li>לאשר את הכותרת ״רעש? או אור?״</li><li>לאשר הקלטות הקריינות בקול עומר ולהטמיע ״הרבי״</li><li>לקצר מ-68 שניות לאורך סופי של 55-60 שניות</li><li>לוודא צבעים בהירים</li></ul></details>
-  <details><summary>גרסאות קודמות (2)</summary><ul><li><a href="files/mi-anachnu-1021-1754.mp4" download>21/10 17:54</a> הסרטון המעודן של כהנא לפי התיקונים (טיוטה 17)</li><li><a href="files/mi-anachnu-1021-1157.mp4" download>21/10 11:57</a> טיוטה 8 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול</li></ul></details>
+  <h2>מי אנחנו</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/mi-anachnu-1021-1754.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10</span><a href="files/mi-anachnu-1021-1754.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור סופי<small>אחרי התיקונים של מענדי קורטס</small></span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%9E%D7%99%20%D7%90%D7%A0%D7%97%D7%A0%D7%95%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
 </article>
-<article class="card wait" data-key="news-items">
-  <h2>סקר רחוב בכפר חב״ד (סרטון הלקוח, ״שלמה כהן״)</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/news-items-draft-1021-1717.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-21/10 17:17</span><a href="files/news-items-draft-1021-1717.mp4" download>הורדה ↓</a></div>
-  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%A1%D7%A7%D7%A8%20%D7%A8%D7%97%D7%95%D7%91%20%D7%91%D7%9B%D7%A4%D7%A8%20%D7%97%D7%91%D7%B4%D7%93%20%28%D7%A1%D7%A8%D7%98%D7%95%D7%9F%20%D7%94%D7%9C%D7%A7%D7%95%D7%97%2C%20%D7%B4%D7%A9%D7%9C%D7%9E%D7%94%20%D7%9B%D7%94%D7%9F%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
-  <details><summary>מה בתיקון (2)</summary><ul><li>להמתין לטקסט לאתרים ולהנחיות העריכה מהלקוח</li><li>להאזין להודעות הקוליות של מושקי ולקובץ השמע של הלקוח</li></ul></details>
-  <details><summary>גרסאות קודמות (2)</summary><ul><li><a href="files/news-items-1021-1717.mp4" download>21/10 17:17</a> סקר כפר חב״ד, טיוטה 5 עם סנכרון מתוקן</li><li><a href="files/news-items-1021-1709.mp4" download>21/10 17:09</a> סקר כפר חב״ד, טיוטה 4 (תוקנה אחר כך בעיית סנכרון)</li></ul></details>
+<article class="card wait" data-key="yosef">
+  <h2>אין כמו חסידי חב״ד</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/yosef-1021-1755.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10</span><a href="files/yosef-1021-1755.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור סופי<small>אחרי התיקונים של מענדי קורטס</small></span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%90%D7%99%D7%9F%20%D7%9B%D7%9E%D7%95%20%D7%97%D7%A1%D7%99%D7%93%D7%99%20%D7%97%D7%91%D7%B4%D7%93%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
 </article>
-<article class="card wait" data-key="deutsch">
-  <h2>הרב דייטש</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/deutsch-draft-1021-1924.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-21/10 19:24</span><a href="files/deutsch-draft-1021-1924.mp4" download>הורדה ↓</a></div>
-  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A8%D7%91%20%D7%93%D7%99%D7%99%D7%98%D7%A9%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
-  <details><summary>מה בתיקון (3)</summary><ul><li>לקבל תגובת הלקוח לטיוטה 13</li><li>לבדוק מילה-מילה שהכול נשמע מעל המוזיקה</li><li>לשלוח לאישור אריה דרעי לפני הפצה</li></ul></details>
-  <details><summary>גרסאות קודמות (3)</summary><ul><li><a href="files/deutsch-1021-1925.mp4" download>21/10 19:25</a> הרב דייטש, טיוטה 13 עם מוזיקה עוצמתית (שיוך לפי ההקשר)</li><li><a href="files/deutsch-1021-1912.mp4" download>21/10 19:12</a> הרב דייטש, טיוטה 12 (שיוך לפי ההקשר)</li><li><a href="files/deutsch-1021-1708.mp4" download>21/10 17:08</a> הרב דייטש, טיוטה 5</li></ul></details>
-</article></div></section><section class="sec prep"><div class="sechead"><h3>בעבודה אצלנו <b>2</b></h3><p>עוד לא נשלחו ללקוח</p></div><div class="grid">
-<article class="card prep" data-key="v5">
-  <h2><span class="num">5</span>בדרך לרבי</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v5-draft-1019-0930.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-19/10 09:30</span><a href="files/v5-draft-1019-0930.mp4" download>הורדה ↓</a></div>
-  <div class="badge prep"><i>…</i><span>בעבודה, עוד לא נשלח ללקוח</span></div>
-  <details><summary>מה בתיקון (4)</summary><ul><li>אישור הגייה, בעיקר ״קְבוּצֶה״ (מלרע או מלעיל)</li><li>אנימציית תמים לומד לקטע ״תמים״</li><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li><li>להחליף את הקלפי בזווית קדמית</li></ul></details>
-  
-</article>
-<article class="card prep" data-key="v14s">
-  <h2>חסיד חב״ד מצביע ש״ס (14 שניות)</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v14s-draft-1019-0930.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-19/10 09:30</span><a href="files/v14s-draft-1019-0930.mp4" download>הורדה ↓</a></div>
-  <div class="badge prep"><i>…</i><span>בעבודה, עוד לא נשלח ללקוח</span></div>
-  <details><summary>מה בתיקון (2)</summary><ul><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li><li>להחליף את הקלפי בזווית קדמית</li></ul></details>
-  
-</article></div></section><section class="sec ok"><div class="sechead"><h3>אושרו <b>3</b></h3><p>גרסה סופית, מוכנה להפצה</p></div><div class="grid">
-<article class="card ok" data-key="v1">
-  <h2><span class="num">1</span>הצלה</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v1-1020-1941.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-20/10 19:41</span><a href="files/v1-1020-1941.mp4" download>הורדה ↓</a></div>
-  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
-  
-  
-</article>
-<article class="card ok" data-key="v3">
-  <h2><span class="num">3</span>מה הרבי היה אומר</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v3-1020-1941.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-20/10 19:41</span><a href="files/v3-1020-1941.mp4" download>הורדה ↓</a></div>
-  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
-  
-  
-</article>
-<article class="card ok" data-key="v4">
-  <h2><span class="num">4</span>הידידות</h2>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v4-1020-1941.mp4#t=0.1"></video></div>
-  <div class="meta"><span>גרסה מ-20/10 19:41</span><a href="files/v4-1020-1941.mp4" download>הורדה ↓</a></div>
-  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
-  
-  
+<article class="card wait" data-key="haredit">
+  <h2>הרשימה החרדית ביותר</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/haredit-1021-1913.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10</span><a href="files/haredit-1021-1913.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור סופי<small>אחרי התיקונים של מענדי קורטס</small></span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A8%D7%A9%D7%99%D7%9E%D7%94%20%D7%94%D7%97%D7%A8%D7%93%D7%99%D7%AA%20%D7%91%D7%99%D7%95%D7%AA%D7%A8%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
 </article></div></section>
 <div class="foot">הדף מתעדכן אוטומטית מקבוצות העבודה</div>
 </main>
