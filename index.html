@@ -2,322 +2,189 @@
 <html lang="he" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0c0005">
-<title>ש״ס · חדר המצב</title>
+<meta name="theme-color" content="#3A0716">
+<title>ש״ס · סרטוני הקמפיין</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0c0005;--wine:#3A0716;--red:#FF4A3D;--red2:#d8392e;--paper:#f4f1ea;--ink:#f4f1ea;--mute:#a99d98;--line:rgba(255,74,61,.22);
---ok:#4ade80;--sent:#60a5fa;--review:#fbbf24;--fix:#FF4A3D;--draft:#a8a29e;--wait:#c084fc}
+:root{--wine:#3A0716;--red:#E5392D;--bg:#f5f2ee;--card:#fff;--ink:#1c1416;--mute:#7a6f6c;--line:#e8e1dc;
+--ok:#16a34a;--okbg:#e9f8ef;--wait:#c2410c;--waitbg:#fff1e6;--prep:#6b6461;--prepbg:#f1eeec}
 *{box-sizing:border-box}
-html{background:var(--bg);overflow-x:hidden;overflow-x:clip}
-body{margin:0;color:var(--ink);font:16px/1.55 Rubik,system-ui,sans-serif;min-height:100vh;overflow-x:hidden;overflow-x:clip;max-width:100vw;
-background:radial-gradient(60vw 50vw at 85% -5%,#5a0b1f 0,transparent 60%),radial-gradient(50vw 40vw at 0% 40%,#2a0510 0,transparent 70%),var(--bg)}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;z-index:0;
-background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
-.ghost{position:fixed;left:-4vw;bottom:-8vw;font:900 42vw/1 Rubik;color:transparent;-webkit-text-stroke:2px rgba(255,74,61,.07);pointer-events:none;z-index:0;user-select:none}
-.wrap{position:relative;z-index:1;max-width:1180px;margin:auto;padding:28px 20px 60px}
-.neon{position:absolute;top:0;left:0;width:100%;height:260px;pointer-events:none;z-index:0}
-.neon path{fill:none;stroke:var(--red);stroke-width:3;filter:drop-shadow(0 0 6px var(--red)) drop-shadow(0 0 18px var(--red2));
-stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 2.4s cubic-bezier(.65,0,.35,1) .2s forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.hero{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin:8px 0 26px}
-.note{width:150px;aspect-ratio:3/4;background:var(--paper);color:#111;border-radius:3px;transform:rotate(-4deg);
-box-shadow:0 18px 40px rgba(0,0,0,.6),0 2px 0 rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
-.note b{font:900 66px/1 Rubik;letter-spacing:-.02em}
-.note span{font-size:11px;font-weight:500;text-align:center;line-height:1.35;margin-top:10px}
-.note::after{content:"";position:absolute;top:-12px;right:22px;width:64px;height:22px;background:rgba(240,230,210,.55);transform:rotate(8deg)}
-h1{font:900 clamp(40px,7vw,76px)/1 Rubik;margin:0;letter-spacing:-.02em}
-h1 em{font-style:normal;color:var(--red);text-shadow:0 0 18px rgba(255,74,61,.55)}
-.tag{color:var(--mute);margin-top:10px;font-size:15px}
-.clock{border:1px solid var(--line);background:linear-gradient(180deg,rgba(58,7,22,.75),rgba(12,0,5,.75));border-radius:18px;padding:18px 18px 16px;margin-bottom:18px;text-align:center;position:relative;overflow:hidden}
-.clock .lbl{font-weight:700;letter-spacing:.02em;color:var(--mute)}
-.clock .lbl b{color:var(--ink)}
-.digits{display:flex;justify-content:center;gap:clamp(4px,2vw,22px);margin:10px 0 4px;direction:rtl}
-.u{min-width:clamp(48px,15vw,128px)}
-.u .n{display:block;font:900 clamp(36px,10vw,96px)/1 Rubik;font-variant-numeric:tabular-nums;color:var(--red);text-shadow:0 0 14px rgba(255,74,61,.7),0 0 40px rgba(255,74,61,.35)}
-.u small{color:var(--mute);font-weight:500}
-.sep{font:900 clamp(36px,8vw,80px)/1 Rubik;color:rgba(255,74,61,.4);align-self:flex-start;padding-top:4px}
-.clock.hot{animation:pulse 1s ease-in-out infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 1px var(--red),0 0 40px rgba(255,74,61,.35) inset}}
-.u.sec .n{animation:tick 1s steps(1) infinite}
-@keyframes tick{0%{opacity:1}85%{opacity:.55}}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
-.stat{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:rgba(20,18,18,.6)}
-.stat b{font:900 34px/1 Rubik;display:block}.stat small{color:var(--mute)}
-.bar{height:10px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin:6px 0 4px}
-.bar i{display:block;height:100%;width:30%;background:var(--red);box-shadow:0 0 12px var(--red);border-radius:99px}
-.notes{border-inline-start:4px solid var(--red);background:rgba(255,74,61,.08);border-radius:10px;padding:10px 16px;margin:18px 0}
-.notes ul{margin:0;padding-inline-start:18px}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
-.card{position:relative;background:rgba(20,18,18,.82);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:18px;box-shadow:0 14px 30px rgba(0,0,0,.35);
-border-top:3px solid var(--c);backdrop-filter:blur(4px)}
-.ok{--c:var(--ok)}.sent{--c:var(--sent)}.review{--c:var(--review)}.fix{--c:var(--fix)}.draft{--c:var(--draft)}.wait{--c:var(--wait)}
-.card header{display:flex;align-items:center;gap:10px}
-.num{font:900 30px/1 Rubik;color:var(--c);min-width:26px}
-h2{font:900 22px/1.1 Rubik;margin:0;flex:1}
-.pill{font-size:13px;font-weight:700;color:var(--c);border:1px solid var(--c);padding:2px 10px;border-radius:999px;white-space:nowrap}
-.st{margin:10px 0 12px;color:#e8e1dc}
-.facts{display:flex;gap:26px;padding:10px 0;border-block:1px dashed rgba(255,255,255,.1)}
-.facts small{display:block;color:var(--mute);font-size:12px}
-h3{font-size:13px;color:var(--red);margin:14px 0 4px;font-weight:700;letter-spacing:.02em}
-ul{margin:0;padding-inline-start:20px}li{margin:3px 0}
-.fix li::marker{color:var(--red)}
-.done li{color:var(--mute);text-decoration:line-through;text-decoration-color:rgba(255,74,61,.6)}
-.card{display:flex;flex-direction:column}.card footer{margin-top:auto;padding-top:12px}.st{min-height:4.65em}.media{height:400px;margin-top:12px;border-radius:12px;background:#000;overflow:hidden;display:grid;place-items:center}.media video{height:400px;width:225px;max-width:100%;max-height:none;margin:0;border-radius:0;object-fit:contain}.media.empty{background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px);border:1px dashed rgba(255,255,255,.12);color:var(--mute)}.cap{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:#ddd;margin-top:6px;min-height:1.6em}details{margin-top:14px;font-size:14px}summary{cursor:pointer;color:var(--mute);font-weight:500}.sentrow{margin-top:6px}.meta{font-size:14px;color:#ddd}.reply{font-size:14px;color:var(--ok)}
-video{display:block;width:100%;max-height:440px;border-radius:10px;margin-top:8px;background:#000;object-fit:contain}
-a{color:var(--red);font-weight:700}
-footer{margin-top:12px;font-size:12px;color:var(--mute)}
-.stamp{position:absolute;top:14px;left:-6px;background:var(--paper);color:#111;font:900 15px/1 Rubik;padding:7px 12px;transform:rotate(-6deg);box-shadow:0 6px 14px rgba(0,0,0,.5)}
-.card.ok .pill{display:none}
-.card footer{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.approve{color:var(--ok);border:1px solid var(--ok);border-radius:999px;padding:5px 14px;font-size:13px;text-decoration:none;white-space:nowrap}
-button.approve{background:none;font:inherit;font-size:13px;cursor:pointer;margin-inline-start:10px}button.approve:disabled{opacity:.6;cursor:wait}
-.approve:hover{background:rgba(74,222,128,.12)}
-.foot{margin-top:30px;color:var(--mute);font-size:13px;text-align:center}
-@media (max-width:640px){.hero{grid-template-columns:1fr;justify-items:center;text-align:center}.note{width:110px}.note b{font-size:48px}.stats{gap:8px}.stat b{font-size:26px}.grid{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}.neon path{stroke-dashoffset:0}}
+html,body{overflow-x:hidden;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Rubik,system-ui,sans-serif;-webkit-text-size-adjust:100%}
+.top{background:var(--wine);color:#fff;padding:28px 20px 30px;background-image:radial-gradient(70vw 40vw at 100% 0,#6b0f27 0,transparent 60%)}
+.in{max-width:1120px;margin:auto}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;opacity:.85;font-size:14px}
+.brand b{background:#fff;color:var(--wine);font:900 18px/1 Rubik;padding:6px 9px;border-radius:6px}
+h1{font:900 clamp(30px,6vw,52px)/1.05 Rubik;margin:18px 0 6px;letter-spacing:-.02em}
+.sub{opacity:.75;margin:0}
+.row{display:grid;grid-template-columns:repeat(3,1fr) 1.6fr;gap:10px;margin-top:22px}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 14px}
+.kpi b{display:block;font:900 30px/1 Rubik}.kpi small{opacity:.75}
+.kpi.ok b{color:#6ee7a0}.kpi.wait b{color:#ffb38a}
+.clock{display:flex;flex-direction:column;justify-content:center}
+.clock .t{font:900 30px/1 Rubik;font-variant-numeric:tabular-nums;color:#ff8a80;letter-spacing:.02em}
+main{max-width:1120px;margin:auto;padding:20px 16px 50px}
+.quiz{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;
+text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(0,0,0,.04);margin-bottom:8px}
+.quiz .ic{flex:none;width:52px;height:52px;border-radius:14px;background:var(--wine);color:#fff;display:grid;place-items:center;font:900 24px Rubik}
+.quiz h4{margin:0;font:700 18px/1.25 Rubik}.quiz p{margin:3px 0 0;color:var(--mute);font-size:14px}
+.quiz .go{margin-inline-start:auto;flex:none;background:var(--red);color:#fff;font-weight:700;padding:9px 16px;border-radius:999px;white-space:nowrap}
+.sechead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:30px 4px 12px}
+.sechead h3{margin:0;font:900 22px/1.2 Rubik}
+.sechead h3 b{font-size:14px;vertical-align:middle;background:var(--c);color:#fff;border-radius:999px;padding:2px 9px;margin-inline-start:4px}
+.sechead p{margin:0;color:var(--mute);font-size:14px}
+.ok{--c:var(--ok);--cb:var(--okbg)}.wait{--c:var(--wait);--cb:var(--waitbg)}.prep{--c:var(--prep);--cb:var(--prepbg)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;
+box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(58,7,22,.05)}
+h2{margin:0;font:700 19px/1.3 Rubik;display:flex;gap:10px;align-items:flex-start;min-height:2.6em}
+.num{flex:none;width:28px;height:28px;border-radius:8px;background:var(--wine);color:#fff;display:grid;place-items:center;font:700 15px/1 Rubik;margin-top:-1px}
+.media{background:#111;border-radius:12px;overflow:hidden;display:grid;place-items:center;height:420px}
+.media video{height:100%;width:100%;object-fit:contain;display:block}
+.meta{display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
+.meta a{color:var(--ink);font-weight:700;text-decoration:none}
+.badge{display:flex;align-items:center;gap:10px;background:var(--cb);color:var(--c);border-radius:12px;padding:10px 12px;font-weight:700}
+.badge i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font:900 15px/1 Rubik;font-style:normal}
+.badge span{flex:1}
+.approve{flex:none;background:var(--ok);color:#fff;border:0;border-radius:999px;padding:7px 16px;font:700 14px Rubik;cursor:pointer;text-decoration:none}
+.approve:disabled{opacity:.6;cursor:wait}
+details{font-size:14px;border-top:1px solid var(--line);padding-top:8px}
+summary{cursor:pointer;color:var(--mute);font-weight:500}
+details ul{margin:6px 0 0;padding-inline-start:20px}details li{margin:3px 0}details a{color:var(--ink);font-weight:700}
+.foot{text-align:center;color:var(--mute);font-size:13px;margin-top:36px}
+@media (max-width:760px){.row{grid-template-columns:repeat(3,1fr)}.clock{grid-column:1/-1}.kpi b{font-size:24px}
+.quiz{flex-wrap:wrap}.quiz .go{margin:0;width:100%;text-align:center}.grid{grid-template-columns:1fr}.media{height:min(560px,130vw)}}
 </style></head><body>
-<div class="ghost" aria-hidden="true">ש״ס</div>
-<svg class="neon" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true"><path d="M1210 40 C 1000 40, 980 150, 760 150 S 420 60, 260 120 S 60 230, -10 210"/></svg>
-<div class="wrap">
-<section class="hero">
-  <div class="note"><b>שס</b><span>התאחדות הספרדים<br>שומרי תורה</span></div>
-  <div><h1>חדר המצב<br><em>לא מתפשרים.</em></h1>
-  <div class="tag">כל סרטוני הקמפיין במקום אחד: מה אושר, מה בתיקון ומה נשלח ללקוח. עודכן 22/10 13:00</div></div>
-</section>
-<section class="clock" id="clock">
-  <div class="lbl">עד שהקלפיות נפתחות · <b>יום שלישי, 27.10 בשעה 07:00</b></div>
-  <div class="digits">
-    <div class="u"><span class="n" id="d">--</span><small>ימים</small></div><span class="sep">:</span>
-    <div class="u"><span class="n" id="h">--</span><small>שעות</small></div><span class="sep">:</span>
-    <div class="u"><span class="n" id="m">--</span><small>דקות</small></div><span class="sep">:</span>
-    <div class="u sec"><span class="n" id="s">--</span><small>שניות</small></div>
+<header class="top"><div class="in">
+  <div class="brand"><b>שס</b>קמפיין הבחירות לבוחרי חב״ד</div>
+  <h1>כל סרטוני הקמפיין</h1>
+  <p class="sub">מה אושר, מה מחכה לאישור ומה בעבודה. מתעדכן אוטומטית · עודכן 22/10 13:03</p>
+  <div class="row">
+    <div class="kpi ok"><b>3</b><small>אושרו</small></div>
+    <div class="kpi wait"><b>8</b><small>מחכים לאישור</small></div>
+    <div class="kpi"><b>2</b><small>בעבודה</small></div>
+    <div class="kpi clock"><span class="t" id="t">--</span><small>עד פתיחת הקלפיות, 27.10 בשעה 07:00</small></div>
   </div>
-</section>
-<section class="stats">
-  <div class="stat"><b>3<small style="font-size:16px"> / 10</small></b><div class="bar"><i></i></div><small>אושרו ע״י הלקוח</small></div>
-  <div class="stat"><b>11</b><small>סרטונים שנשלחו ללקוח</small></div>
-  <div class="stat"><b style="color:var(--red)">47</b><small>תיקונים פתוחים</small></div>
-</section>
-<section class="notes"><ul><li>ב-22/10 הלקוח ביקש בקבוצה סיכום של כל הסרטונים לפי המיפוי, ובקבוצה הוצע: טבלה עם מספר, שם ונושא לכל סרטון, וקישור מהטבלה. מושקי אישרה. יש להכין את הטבלה ולשלוח</li><li>הלקוח (יואל) שלח הודעות קוליות ב-21/10 (17:58, 18:01, ארבע ב-19:14-19:15) וב-22/10 (שתיים ב-12:36, יחד עם הודעה לעיתונות על ״תפילין לכל ילד״ ותמונה), שטרם הוטמעו במלואן. ממתינים להנחיות מדויקות ולתשובה על מקומם של הסרטונים החדשים ביחס לקיימים. בקבוצת הלקוח נמסר שאחד הסרטונים צריך הגשה אחרת, יותר על ההווה</li><li>נותר: מקור ליחס הרבי לכהנא, קטע מאומת של נתניהו על תפקיד דרעי וש״ס (אם יש ללקוח קישור), טקסט לאתרים והנחיות עריכה מהלקוח, אישור אריה דרעי לסרטון הרב דייטש, פושים חדשותיים, אישור נוסח ומועד הפצה (נוישטט וחב״ד און ליין), והחידון. הקלטות קריינות בקול עומר ממתינות לאישור. להחליט אם לבנות עכשיו את הגרסה המחוברת סקר + דייטש. יש לברר אם להפיץ את סרטון הפודקאסט AI על פייגלין כפי שהוא או להפיק סרטון משלנו</li></ul></section>
-<main class="grid">
-<article class="card sent" data-key="v2">
-  <header><span class="num">2</span><h2>הקו של הרבי</h2><span class="pill">נשלח ללקוח</span></header>
-  <p class="st">טיוטה 10 נשלחה לצוות ב-18:21 בשתי גרסאות (עם ג׳ינגל ובלי) ונשלחה ללקוח ב-18:22, כולל גרסה מקוצרת בלי שיר. ממתינים לתגובתו.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 10, בלי ג׳ינגל (21/10)</b></div>
-  <div><small>הכדור אצל</small><b>הלקוח</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v2-draft-1021-1822.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>21/10 18:22</b> טיוטה 10, בלי ג׳ינגל (21/10)</span><a href="files/v2-draft-1021-1822.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>להחליף את הקלפי בזווית קדמית</li><li>לקבל תגובת הלקוח לטיוטה 10</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>טיוטה 10: גוונים תואמים לידידות, עם פס בורדו ותגיות בשמנת</li><li>סוף: קלפי עם הכרטיס ורק אחריו הג׳ינגל</li><li>הוכנה אופציה בלי ג׳ינגל, המוזיקה השמחה ממשיכה עד הסוף</li></ul>
-  <details><summary>נשלח ללקוח (4)</summary><div class="sentrow"><div class="meta"><b>21/10 18:22</b> טיוטה 10 מקוצרת, בלי שיר <a href="files/v2-1021-1822.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>21/10 18:22</b> טיוטה 10 עם ג׳ינגל <a href="files/v2-1021-1822.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>20/10 19:41</b> סרטון 2 נשלח שוב בקבוצת הלקוח <a href="files/v2-1020-1941.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>16/10 16:51</b> גרסה בלי יהדות התורה, עם הצעה לזום במוצאי שבת <a href="files/v2-1016-1651.mp4" download>הורדה</a></div></div></details>
-  <footer>עודכן 21/10 18:22<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A7%D7%95%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%91%D7%99%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card fix" data-key="v5">
-  <header><span class="num">5</span><h2>בדרך לרבי</h2><span class="pill">בתיקונים</span></header>
-  <p class="st">הלוגו בתחתית המסך. מחכים לאישור הגייה, בעיקר ״קְבוּצֶה״, ולניסוח משפט הפתיחה לפי כיוון הלקוח. בבנייה מחדש לאור התסריט החדש (ש״ס מול סמוטריץ׳).</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסה עם הלוגו בתחתית (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>מושקי</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v5-draft-1019-0930.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>19/10 09:30</b> גרסה עם הלוגו בתחתית (19/10)</span><a href="files/v5-draft-1019-0930.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>אישור הגייה, בעיקר ״קְבוּצֶה״ (מלרע או מלעיל)</li><li>אנימציית תמים לומד לקטע ״תמים״</li><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li><li>להחליף את הקלפי בזווית קדמית</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>הלוגו ושורת זכויות היוצרים חזרו לתחתית המסך</li><li>תגיות לא יושבות על הכיפה, הכול מחוץ לשוליים</li><li>כרטיס סיום עומד 2 שניות ודאקינג מתחת לקריין</li></ul>
-  
-  <footer>עודכן 21/10 16:35<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%91%D7%93%D7%A8%D7%9A%20%D7%9C%D7%A8%D7%91%D7%99%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card review" data-key="women">
-  <header><span class="num">6</span><h2>״רַק אֵלַיִךְ״ (נשות חב״ד ורצון הרבי)</h2><span class="pill">מחכה לאישור</span></header>
-  <p class="st">הצעת תסריט לקהל נשי בחב״ד נשלחה לצוות ב-19/10: רצון הרבי בבית וגם בקלפי, והקול שלך שווה. מחכה לתגובה ולאישור.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>הצעת תסריט (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>חוה</b></div></div>
-  <div class="media empty"><span>עוד אין סרטון</span></div><div class="cap"><span>&nbsp;</span></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>להחליט: קול של קריינית או של עומר</li><li>לאשר את התסריט לפני הפקה</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>הוכנה הצעת תסריט עם מקור לכל עובדה</li></ul>
-  
-  <footer>עודכן 19/10 23:15<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%A8%D6%B7%D7%A7%20%D7%90%D6%B5%D7%9C%D6%B7%D7%99%D6%B4%D7%9A%D6%B0%D7%B4%20%28%D7%A0%D7%A9%D7%95%D7%AA%20%D7%97%D7%91%D7%B4%D7%93%20%D7%95%D7%A8%D7%A6%D7%95%D7%9F%20%D7%94%D7%A8%D7%91%D7%99%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card review" data-key="achievements">
-  <header><span class="num">7</span><h2>״ארבעה תאריכים״ (הישגי ש״ס בקדנציה האחרונה)</h2><span class="pill">מחכה לאישור</span></header>
-  <p class="st">הצעת תסריט הישגים נשלחה לצוות ב-19/10: ארבעה תאריכים מרכזיים, והתאריך החמישי הוא 27/10. מחכה לתגובה ולאישור.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>הצעת תסריט (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>חוה</b></div></div>
-  <div class="media empty"><span>עוד אין סרטון</span></div><div class="cap"><span>&nbsp;</span></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לאשר את התסריט לפני הפקה</li><li>לוודא ניסוח שמדייק בייחוס חוק המעצרים</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>הוכנה הצעת תסריט עם מקור לכל עובדה</li></ul>
-  
-  <footer>עודכן 19/10 23:15<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%90%D7%A8%D7%91%D7%A2%D7%94%20%D7%AA%D7%90%D7%A8%D7%99%D7%9B%D7%99%D7%9D%D7%B4%20%28%D7%94%D7%99%D7%A9%D7%92%D7%99%20%D7%A9%D7%B4%D7%A1%20%D7%91%D7%A7%D7%93%D7%A0%D7%A6%D7%99%D7%94%20%D7%94%D7%90%D7%97%D7%A8%D7%95%D7%A0%D7%94%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card review" data-key="land">
-  <header><span class="num">8</span><h2>״דוד ויואב״ (שלמות הארץ אחרי שמחת תורה תשפ״ד)</h2><span class="pill">מחכה לאישור</span></header>
-  <p class="st">הצעת תסריט בקו ימני נשלחה לצוות ב-19/10: שמירה על שתי החזיתות, הארץ והתורה. מחכה לתגובה ולאישור.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>הצעת תסריט (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>חוה</b></div></div>
-  <div class="media empty"><span>עוד אין סרטון</span></div><div class="cap"><span>&nbsp;</span></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לאשר את התסריט לפני הפקה</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>הוכנה הצעת תסריט עם מקור לכל עובדה</li></ul>
-  
-  <footer>עודכן 19/10 23:15<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%93%D7%95%D7%93%20%D7%95%D7%99%D7%95%D7%90%D7%91%D7%B4%20%28%D7%A9%D7%9C%D7%9E%D7%95%D7%AA%20%D7%94%D7%90%D7%A8%D7%A5%20%D7%90%D7%97%D7%A8%D7%99%20%D7%A9%D7%9E%D7%97%D7%AA%20%D7%AA%D7%95%D7%A8%D7%94%20%D7%AA%D7%A9%D7%A4%D7%B4%D7%93%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card review" data-key="idea4">
-  <header><span class="num">9</span><h2>״4,062״ (יציאה להצביע)</h2><span class="pill">מחכה לאישור</span></header>
-  <p class="st">הצעת תסריט ליציאה להצביע נשלחה לצוות ב-19/10: ״מבצע קלפי״ והקול שלך הוא ההבדל. מחכה לתגובה ולאישור.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>הצעת תסריט (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>חוה</b></div></div>
-  <div class="media empty"><span>עוד אין סרטון</span></div><div class="cap"><span>&nbsp;</span></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לאשר את התסריט לפני הפקה</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>הוכנה הצעת תסריט עם מקור לכל עובדה</li></ul>
-  
-  <footer>עודכן 19/10 23:15<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B44%2C062%D7%B4%20%28%D7%99%D7%A6%D7%99%D7%90%D7%94%20%D7%9C%D7%94%D7%A6%D7%91%D7%99%D7%A2%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
+</div></header>
+<main>
+<a class="quiz" href="https://mivchan-hakav.vercel.app/" target="_blank" rel="noopener">
+  <span class="ic">?</span>
+  <div><h4>בחנו את עצמכם: מי באמת נאמן לקו של הרבי?</h4>
+  <p>מבחן קצר שמוביל למסקנה שש״ס היא הקו של הרבי, ובסופו גלריה של כל הסרטונים</p></div>
+  <span class="go">למבחן ←</span>
+</a>
+<section class="sec wait"><div class="sechead"><h3>מחכים לאישור הלקוח <b>8</b></h3><p>נשלחו ללקוח. אפשר לצפות ולאשר</p></div><div class="grid">
+<article class="card wait" data-key="v2">
+  <h2><span class="num">2</span>הקו של הרבי</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v2-draft-1021-1822.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10 18:22</span><a href="files/v2-draft-1021-1822.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A7%D7%95%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%91%D7%99%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
+  <details><summary>מה בתיקון (2)</summary><ul><li>להחליף את הקלפי בזווית קדמית</li><li>לקבל תגובת הלקוח לטיוטה 10</li></ul></details>
+  <details><summary>גרסאות קודמות (4)</summary><ul><li><a href="files/v2-1021-1822.mp4" download>21/10 18:22</a> טיוטה 10 מקוצרת, בלי שיר</li><li><a href="files/v2-1021-1822.mp4" download>21/10 18:22</a> טיוטה 10 עם ג׳ינגל</li><li><a href="files/v2-1020-1941.mp4" download>20/10 19:41</a> סרטון 2 נשלח שוב בקבוצת הלקוח</li><li><a href="files/v2-1016-1651.mp4" download>16/10 16:51</a> גרסה בלי יהדות התורה, עם הצעה לזום במוצאי שבת</li></ul></details>
 </article>
 <article class="card wait" data-key="jingle">
-  <header><span class="num">·</span><h2>ג׳ינגל</h2><span class="pill">מחכה</span></header>
-  <p class="st">גרסת הג׳ינגל של חוה, באיכות מלאה ועם הסאונד האיכותי, אושרה על ידי מושקי ב-19/10. ממתינה לשליחה ללקוח. הלקוח טרם אישר.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסת חוה מתוקנת, באיכות מלאה (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>מושקי</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/jingle-draft-1019-1342.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>19/10 13:42</b> גרסת חוה מתוקנת, באיכות מלאה (19/10)</span><a href="files/jingle-draft-1019-1342.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>בדיקת סנכרון המילים לשירה</li><li>להוריד את הלוגו ושורת זכויות היוצרים לתחתית המסך</li><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>אישור מושקי לגרסה המתוקנת</li><li>״מִפְלָגָה חֲרֵדִית בְּיוֹתֵר!״ ענק ומנוקד בשני המופעים</li><li>סאונד איכותי מהקובץ המקורי</li></ul>
-  <details><summary>נשלח ללקוח (1)</summary><div class="sentrow"><div class="meta"><b>18/10 16:18</b> הג׳ינגל לפני הידוק, לקבלת הערות על השיר <a href="files/jingle-1018-1618.mp4" download>הורדה</a></div><div class="reply">הלקוח: הלקוח: צריך יותר מזה</div></div></details>
-  <footer>עודכן 19/10 22:04<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%92%D7%B3%D7%99%D7%A0%D7%92%D7%9C%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
+  <h2>ג׳ינגל</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/jingle-draft-1019-1342.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-19/10 13:42</span><a href="files/jingle-draft-1019-1342.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%92%D7%B3%D7%99%D7%A0%D7%92%D7%9C%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
+  <details><summary>מה בתיקון (3)</summary><ul><li>בדיקת סנכרון המילים לשירה</li><li>להוריד את הלוגו ושורת זכויות היוצרים לתחתית המסך</li><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li></ul></details>
+  <details><summary>גרסאות קודמות (1)</summary><ul><li><a href="files/jingle-1018-1618.mp4" download>18/10 16:18</a> הג׳ינגל לפני הידוק, לקבלת הערות על השיר</li></ul></details>
 </article>
-<article class="card wait" data-key="v14s">
-  <header><span class="num">·</span><h2>חסיד חב״ד מצביע ש״ס (14 שניות)</h2><span class="pill">מחכה</span></header>
-  <p class="st">הגרסה עם הלוגו בתחתית אושרה על ידי מושקי ב-19/10. ממתינה לשליחה ללקוח. הלקוח ביקש להשתמש בו כבסיס לסרטון ״הרשימה החרדית ביותר״, והוא נשמר בעיצובו המאושר בגרסה החדשה. נותר לנסח את משפט הפתיחה בפריים הראשון.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסה עם הלוגו בתחתית (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>מושקי</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v14s-draft-1019-0930.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>19/10 09:30</b> גרסה עם הלוגו בתחתית (19/10)</span><a href="files/v14s-draft-1019-0930.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li><li>להחליף את הקלפי בזווית קדמית</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>אישור מושקי לגרסה עם הלוגו בתחתית</li><li>הלוגו ושורת זכויות היוצרים חזרו לתחתית המסך</li><li>פריים ראשון קריא עם ״חסיד חב״ד״</li></ul>
+<article class="card wait" data-key="smotrich">
+  <h2>ש״ס מול סמוטריץ׳ ובן גביר</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/smotrich-1020-1341.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-20/10 13:41</span><a href="files/smotrich-1020-1341.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%A9%D7%B4%D7%A1%20%D7%9E%D7%95%D7%9C%20%D7%A1%D7%9E%D7%95%D7%98%D7%A8%D7%99%D7%A5%D7%B3%20%D7%95%D7%91%D7%9F%20%D7%92%D7%91%D7%99%D7%A8%20%28%D7%93%D7%97%D7%95%D7%A3%3B%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%20%D7%9E%D7%9B%D7%95%D7%A0%D7%94%20%D7%B4%D7%A1%D7%A8%D7%98%D7%95%D7%9F%205%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
+  <details><summary>מה בתיקון (10)</summary><ul><li>לקבל אישור לתסריט ולהתקדם להפקה דחופה</li><li>לנסח: רבני חב״ד קוראים לשאוב כוח ממסירות נפש</li><li>להוסיף קטע קצר נוסף של בן גביר על גיוס</li><li>להשיג קטע בן גביר על המהפכה שעשה במשטרה</li><li>להוסיף לתסריט זווית אחריות המשטרה: ״שתיקה מול המעצרים - חלק מהפשע״</li><li>להטמיע מכתב הרבנים לבחורי חב״ד, במסירות נפש, בנגטיב</li><li>לשלב צילומי זאל ישיבה חב״די</li><li>להאזין להודעות הקוליות ולהטמיע את ההנחיות</li><li>להשיג קטעי דרעי וסמוטריץ׳ ולוודא שהם נקיים</li><li>לאמת ציטוטי הרבי מול מקור חב״די לפני הכנסתם</li></ul></details>
+  <details><summary>גרסאות קודמות (9)</summary><ul><li><a href="files/smotrich-1020-1942.mp4" download>20/10 19:42</a> סרטון 5 נשלח שוב בקבוצת הלקוח</li><li><a href="files/smotrich-1020-1340.mp4" download>20/10 13:40</a> גרסה מתוקנת נוספת</li><li><a href="files/smotrich-1020-1327.mp4" download>20/10 13:27</a> גרסה מתוקנת נוספת לפי דיוקי הלקוח</li><li><a href="files/smotrich-1020-1327.mp4" download>20/10 13:27</a> גרסה מתוקנת לפי דיוקי הלקוח</li><li><a href="files/smotrich-1020-1311.mp4" download>20/10 13:11</a> גרסה מתוקנת נוספת</li><li><a href="files/smotrich-1020-1310.mp4" download>20/10 13:10</a> גרסה מתוקנת לאחר הערות הלקוח</li><li><a href="files/smotrich-1020-1249.mp4" download>20/10 12:49</a> אופציה נוספת עם הקלטה</li><li><a href="files/smotrich-1020-1246.mp4" download>20/10 12:46</a> אופציה נוספת עם הקלטה</li><li><a href="files/smotrich-1020-1244.mp4" download>20/10 12:44</a> סרטון ראשון בקבוצת הלקוח</li></ul></details>
+</article>
+<article class="card wait" data-key="yosef">
+  <h2>״אין כמו חסידי חב״ד״</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/yosef-draft-1021-1754.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10 17:54</span><a href="files/yosef-draft-1021-1754.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%90%D7%99%D7%9F%20%D7%9B%D7%9E%D7%95%20%D7%97%D7%A1%D7%99%D7%93%D7%99%20%D7%97%D7%91%D7%B4%D7%93%D7%B4%20%28%D7%94%D7%A8%D7%91%20%D7%99%D7%A6%D7%97%D7%A7%20%D7%99%D7%95%D7%A1%D7%A3%20%D7%95%D7%97%D7%91%D7%B4%D7%93%3B%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%20%D7%9E%D7%9B%D7%95%D7%A0%D7%94%20%D7%B4%D7%A1%D7%A8%D7%98%D7%95%D7%9F%206%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
+  <details><summary>מה בתיקון (2)</summary><ul><li>לקבל תגובת הלקוח לטיוטה 15</li><li>להגביר עוד את הקטעים המדברים, אם יתבקש</li></ul></details>
+  <details><summary>גרסאות קודמות (2)</summary><ul><li><a href="files/yosef-1021-1755.mp4" download>21/10 17:55</a> סרטון מרן מתוקן (טיוטה 15), עם קטעים מדברים מוגברים</li><li><a href="files/yosef-1021-1157.mp4" download>21/10 11:57</a> טיוטה 9 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול</li></ul></details>
+</article>
+<article class="card wait" data-key="haredit">
+  <h2>״הרשימה החרדית ביותר״</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/haredit-draft-1021-1911.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10 19:11</span><a href="files/haredit-draft-1021-1911.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%94%D7%A8%D7%A9%D7%99%D7%9E%D7%94%20%D7%94%D7%97%D7%A8%D7%93%D7%99%D7%AA%20%D7%91%D7%99%D7%95%D7%AA%D7%A8%D7%B4%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
+  <details><summary>מה בתיקון (3)</summary><ul><li>לקבל תגובת הלקוח לטיוטה 17</li><li>לשמוע את ״חרדית״ בקריינות; לאשר הקלטות בקול עומר</li><li>לאשר את נוסח הפתיח החיובי</li></ul></details>
+  <details><summary>גרסאות קודמות (4)</summary><ul><li><a href="files/haredit-1021-1913.mp4" download>21/10 19:13</a> טיוטה 17 נשלחה בקבוצת הלקוח (שיוך לפי ההקשר)</li><li><a href="files/haredit-1021-1833.mp4" download>21/10 18:33</a> טיוטה 16 נשלחה בקבוצת הלקוח (שיוך לפי ההקשר)</li><li><a href="files/haredit-1021-1802.mp4" download>21/10 18:02</a> סרטון נשלח בקבוצת הלקוח כסרטון שהתבקש להפוך לחיובי; בוצעה שליחה מחדש עקב תקלה</li><li><a href="files/haredit-1021-1157.mp4" download>21/10 11:57</a> טיוטה 7 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול</li></ul></details>
+</article>
+<article class="card wait" data-key="mi-anachnu">
+  <h2>״מי אנחנו״ (יחס הרבי לכהנא ובחירה בקלפי)</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/mi-anachnu-draft-1021-1753.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10 17:53</span><a href="files/mi-anachnu-draft-1021-1753.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%9E%D7%99%20%D7%90%D7%A0%D7%97%D7%A0%D7%95%D7%B4%20%28%D7%99%D7%97%D7%A1%20%D7%94%D7%A8%D7%91%D7%99%20%D7%9C%D7%9B%D7%94%D7%A0%D7%90%20%D7%95%D7%91%D7%97%D7%99%D7%A8%D7%94%20%D7%91%D7%A7%D7%9C%D7%A4%D7%99%29%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
+  <details><summary>מה בתיקון (4)</summary><ul><li>לאשר את הכותרת ״רעש? או אור?״</li><li>לאשר הקלטות הקריינות בקול עומר ולהטמיע ״הרבי״</li><li>לקצר מ-68 שניות לאורך סופי של 55-60 שניות</li><li>לוודא צבעים בהירים</li></ul></details>
+  <details><summary>גרסאות קודמות (2)</summary><ul><li><a href="files/mi-anachnu-1021-1754.mp4" download>21/10 17:54</a> הסרטון המעודן של כהנא לפי התיקונים (טיוטה 17)</li><li><a href="files/mi-anachnu-1021-1157.mp4" download>21/10 11:57</a> טיוטה 8 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול</li></ul></details>
+</article>
+<article class="card wait" data-key="news-items">
+  <h2>סקר רחוב בכפר חב״ד (סרטון הלקוח, ״שלמה כהן״)</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/news-items-draft-1021-1717.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10 17:17</span><a href="files/news-items-draft-1021-1717.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%A1%D7%A7%D7%A8%20%D7%A8%D7%97%D7%95%D7%91%20%D7%91%D7%9B%D7%A4%D7%A8%20%D7%97%D7%91%D7%B4%D7%93%20%28%D7%A1%D7%A8%D7%98%D7%95%D7%9F%20%D7%94%D7%9C%D7%A7%D7%95%D7%97%2C%20%D7%B4%D7%A9%D7%9C%D7%9E%D7%94%20%D7%9B%D7%94%D7%9F%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
+  <details><summary>מה בתיקון (2)</summary><ul><li>להמתין לטקסט לאתרים ולהנחיות העריכה מהלקוח</li><li>להאזין להודעות הקוליות של מושקי ולקובץ השמע של הלקוח</li></ul></details>
+  <details><summary>גרסאות קודמות (2)</summary><ul><li><a href="files/news-items-1021-1717.mp4" download>21/10 17:17</a> סקר כפר חב״ד, טיוטה 5 עם סנכרון מתוקן</li><li><a href="files/news-items-1021-1709.mp4" download>21/10 17:09</a> סקר כפר חב״ד, טיוטה 4 (תוקנה אחר כך בעיית סנכרון)</li></ul></details>
+</article>
+<article class="card wait" data-key="deutsch">
+  <h2>הרב דייטש</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/deutsch-draft-1021-1924.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-21/10 19:24</span><a href="files/deutsch-draft-1021-1924.mp4" download>הורדה ↓</a></div>
+  <div class="badge wait"><i>!</i><span>מחכה לאישור הלקוח</span><a class="approve" target="_blank" rel="noopener" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A8%D7%91%20%D7%93%D7%99%D7%99%D7%98%D7%A9%20%D7%90%D7%95%D7%A9%D7%A8">לאשר</a></div>
+  <details><summary>מה בתיקון (3)</summary><ul><li>לקבל תגובת הלקוח לטיוטה 13</li><li>לבדוק מילה-מילה שהכול נשמע מעל המוזיקה</li><li>לשלוח לאישור אריה דרעי לפני הפצה</li></ul></details>
+  <details><summary>גרסאות קודמות (3)</summary><ul><li><a href="files/deutsch-1021-1925.mp4" download>21/10 19:25</a> הרב דייטש, טיוטה 13 עם מוזיקה עוצמתית (שיוך לפי ההקשר)</li><li><a href="files/deutsch-1021-1912.mp4" download>21/10 19:12</a> הרב דייטש, טיוטה 12 (שיוך לפי ההקשר)</li><li><a href="files/deutsch-1021-1708.mp4" download>21/10 17:08</a> הרב דייטש, טיוטה 5</li></ul></details>
+</article></div></section><section class="sec prep"><div class="sechead"><h3>בעבודה אצלנו <b>2</b></h3><p>עוד לא נשלחו ללקוח</p></div><div class="grid">
+<article class="card prep" data-key="v5">
+  <h2><span class="num">5</span>בדרך לרבי</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v5-draft-1019-0930.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-19/10 09:30</span><a href="files/v5-draft-1019-0930.mp4" download>הורדה ↓</a></div>
+  <div class="badge prep"><i>…</i><span>בעבודה, עוד לא נשלח ללקוח</span></div>
+  <details><summary>מה בתיקון (4)</summary><ul><li>אישור הגייה, בעיקר ״קְבוּצֶה״ (מלרע או מלעיל)</li><li>אנימציית תמים לומד לקטע ״תמים״</li><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li><li>להחליף את הקלפי בזווית קדמית</li></ul></details>
   
-  <footer>עודכן 21/10 16:43<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%97%D7%A1%D7%99%D7%93%20%D7%97%D7%91%D7%B4%D7%93%20%D7%9E%D7%A6%D7%91%D7%99%D7%A2%20%D7%A9%D7%B4%D7%A1%20%2814%20%D7%A9%D7%A0%D7%99%D7%95%D7%AA%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
 </article>
-<article class="card sent" data-key="smotrich">
-  <header><span class="num">·</span><h2>ש״ס מול סמוטריץ׳ ובן גביר (דחוף; בצוות מכונה ״סרטון 5״)</h2><span class="pill">נשלח ללקוח</span></header>
-  <p class="st">ב-20/10 בשעות 13:27 ו-13:40-13:41 נשלחו ללקוח גרסאות נוספות, בעקבות דיוקי הלקוח (קיצור בסיום קטע בן גביר, הסרת התאריך מהפתיחה, ״תמימים״). ב-19:42 נשלח שוב כסרטון 5. ממתינים לתגובתו.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסה מתוקנת נוספת (20/10 13:41)</b></div>
-  <div><small>הכדור אצל</small><b>הלקוח</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/smotrich-1020-1341.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>20/10 13:41</b> גרסה מתוקנת נוספת (20/10 13:41)</span><a href="files/smotrich-1020-1341.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לקבל אישור לתסריט ולהתקדם להפקה דחופה</li><li>לנסח: רבני חב״ד קוראים לשאוב כוח ממסירות נפש</li><li>להוסיף קטע קצר נוסף של בן גביר על גיוס</li><li>להשיג קטע בן גביר על המהפכה שעשה במשטרה</li><li>להוסיף לתסריט זווית אחריות המשטרה: ״שתיקה מול המעצרים - חלק מהפשע״</li><li>להטמיע מכתב הרבנים לבחורי חב״ד, במסירות נפש, בנגטיב</li><li>לשלב צילומי זאל ישיבה חב״די</li><li>להאזין להודעות הקוליות ולהטמיע את ההנחיות</li><li>להשיג קטעי דרעי וסמוטריץ׳ ולוודא שהם נקיים</li><li>לאמת ציטוטי הרבי מול מקור חב״די לפני הכנסתם</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>קוצרה שנייה וחצי בסיום קטע בן גביר</li><li>הוסר התאריך מהפתיחה: מתחילים בסירנות</li><li>״תמימים״ במקום ״התלמידים השלוחים״</li></ul>
-  <details><summary>נשלח ללקוח (9)</summary><div class="sentrow"><div class="meta"><b>20/10 19:42</b> סרטון 5 נשלח שוב בקבוצת הלקוח <a href="files/smotrich-1020-1942.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>20/10 13:40</b> גרסה מתוקנת נוספת <a href="files/smotrich-1020-1340.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>20/10 13:27</b> גרסה מתוקנת נוספת לפי דיוקי הלקוח <a href="files/smotrich-1020-1327.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>20/10 13:27</b> גרסה מתוקנת לפי דיוקי הלקוח <a href="files/smotrich-1020-1327.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>20/10 13:11</b> גרסה מתוקנת נוספת <a href="files/smotrich-1020-1311.mp4" download>הורדה</a></div><div class="reply">הלקוח: מענדי קורטס: הרבה יותר טוב. לקצץ שנייה וחצי בסיום קטע בן גביר, להסיר תאריך מהפתיחה, ״תמימים״</div></div><div class="sentrow"><div class="meta"><b>20/10 13:10</b> גרסה מתוקנת לאחר הערות הלקוח <a href="files/smotrich-1020-1310.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>20/10 12:49</b> אופציה נוספת עם הקלטה <a href="files/smotrich-1020-1249.mp4" download>הורדה</a></div><div class="reply">הלקוח: מענדי קורטס: להדק את מסר בית הדין, וקטע דרעי בסיום ובצבע</div></div><div class="sentrow"><div class="meta"><b>20/10 12:46</b> אופציה נוספת עם הקלטה <a href="files/smotrich-1020-1246.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>20/10 12:44</b> סרטון ראשון בקבוצת הלקוח <a href="files/smotrich-1020-1244.mp4" download>הורדה</a></div></div></details>
-  <footer>עודכן 20/10 19:42<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%A9%D7%B4%D7%A1%20%D7%9E%D7%95%D7%9C%20%D7%A1%D7%9E%D7%95%D7%98%D7%A8%D7%99%D7%A5%D7%B3%20%D7%95%D7%91%D7%9F%20%D7%92%D7%91%D7%99%D7%A8%20%28%D7%93%D7%97%D7%95%D7%A3%3B%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%20%D7%9E%D7%9B%D7%95%D7%A0%D7%94%20%D7%B4%D7%A1%D7%A8%D7%98%D7%95%D7%9F%205%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card sent" data-key="yosef">
-  <header><span class="num">·</span><h2>״אין כמו חסידי חב״ד״ (הרב יצחק יוסף וחב״ד; בצוות מכונה ״סרטון 6״)</h2><span class="pill">נשלח ללקוח</span></header>
-  <p class="st">טיוטה 15 נשלחה לצוות ב-17:54 ולקוח ב-17:55, עם הגברת כל הקטעים המדברים והורדת המוזיקה מתחתם. ממתינים לתגובת הלקוח.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 15 (21/10)</b></div>
-  <div><small>הכדור אצל</small><b>הלקוח</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/yosef-draft-1021-1754.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>21/10 17:54</b> טיוטה 15 (21/10)</span><a href="files/yosef-draft-1021-1754.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לקבל תגובת הלקוח לטיוטה 15</li><li>להגביר עוד את הקטעים המדברים, אם יתבקש</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>הוגברו כל הקטעים המדברים לעוצמת הקריינות</li><li>צילומים אחרונים בצבע מלא ובהיר, ארכיון נשאר בשחור-לבן</li><li>סגיר חדש עם הקלפי נכנס בסוף, והניגון ממשיך</li></ul>
-  <details><summary>נשלח ללקוח (2)</summary><div class="sentrow"><div class="meta"><b>21/10 17:55</b> סרטון מרן מתוקן (טיוטה 15), עם קטעים מדברים מוגברים <a href="files/yosef-1021-1755.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>21/10 11:57</b> טיוטה 9 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול <a href="files/yosef-1021-1157.mp4" download>הורדה</a></div></div></details>
-  <footer>עודכן 21/10 17:57<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%90%D7%99%D7%9F%20%D7%9B%D7%9E%D7%95%20%D7%97%D7%A1%D7%99%D7%93%D7%99%20%D7%97%D7%91%D7%B4%D7%93%D7%B4%20%28%D7%94%D7%A8%D7%91%20%D7%99%D7%A6%D7%97%D7%A7%20%D7%99%D7%95%D7%A1%D7%A3%20%D7%95%D7%97%D7%91%D7%B4%D7%93%3B%20%D7%91%D7%A6%D7%95%D7%95%D7%AA%20%D7%9E%D7%9B%D7%95%D7%A0%D7%94%20%D7%B4%D7%A1%D7%A8%D7%98%D7%95%D7%9F%206%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card sent" data-key="haredit">
-  <header><span class="num">·</span><h2>״הרשימה החרדית ביותר״</h2><span class="pill">נשלח ללקוח</span></header>
-  <p class="st">טיוטה 17 נשלחה לצוות ב-19:11 ונראה שנשלחה ללקוח ב-19:13: השער כולל רק ״הַמִּפְלָגָה הַחֲרֵדִית בְּיוֹתֵר״ במרכז, בלי פתק ש״ס ובלי החסיד. ממתינים לתגובת הלקוח. זהו סרטון נפרד מ״הקו של הרבי״.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 17 (21/10)</b></div>
-  <div><small>הכדור אצל</small><b>הלקוח</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/haredit-draft-1021-1911.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>21/10 19:11</b> טיוטה 17 (21/10)</span><a href="files/haredit-draft-1021-1911.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לקבל תגובת הלקוח לטיוטה 17</li><li>לשמוע את ״חרדית״ בקריינות; לאשר הקלטות בקול עומר</li><li>לאשר את נוסח הפתיח החיובי</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>טיוטה 17: שער רק עם ״הַמִּפְלָגָה הַחֲרֵדִית בְּיוֹתֵר״, בלי פתק ובלי חסיד</li><li>טיוטה 16: ״החרדית״ במרכז השער, נראית במלואה בוואטסאפ</li><li>טיוטה 15: שער מעוצב כתמונה ראשונה, בלי ג׳ינגל</li></ul>
-  <details><summary>נשלח ללקוח (4)</summary><div class="sentrow"><div class="meta"><b>21/10 19:13</b> טיוטה 17 נשלחה בקבוצת הלקוח (שיוך לפי ההקשר) <a href="files/haredit-1021-1913.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>21/10 18:33</b> טיוטה 16 נשלחה בקבוצת הלקוח (שיוך לפי ההקשר) <a href="files/haredit-1021-1833.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>21/10 18:02</b> סרטון נשלח בקבוצת הלקוח כסרטון שהתבקש להפוך לחיובי; בוצעה שליחה מחדש עקב תקלה <a href="files/haredit-1021-1802.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>21/10 11:57</b> טיוטה 7 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול <a href="files/haredit-1021-1157.mp4" download>הורדה</a></div><div class="reply">הלקוח: מענדי קורטס: צריך סרטון חיובי, קצר וקולע, על בסיס ה-14 שניות, בלי מעצרים</div></div></details>
-  <footer>עודכן 21/10 19:13<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%94%D7%A8%D7%A9%D7%99%D7%9E%D7%94%20%D7%94%D7%97%D7%A8%D7%93%D7%99%D7%AA%20%D7%91%D7%99%D7%95%D7%AA%D7%A8%D7%B4%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card sent" data-key="mi-anachnu">
-  <header><span class="num">·</span><h2>״מי אנחנו״ (יחס הרבי לכהנא ובחירה בקלפי)</h2><span class="pill">נשלח ללקוח</span></header>
-  <p class="st">טיוטה 17 עם ״ניו יורק״ מתוקן לפי ההקלטה השנייה נשלחה לצוות ב-17:53 ולקוח ב-17:54, כגרסה מעודנת לפי התיקונים. ממתינים לתגובת הלקוח.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 17 (21/10)</b></div>
-  <div><small>הכדור אצל</small><b>הלקוח</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/mi-anachnu-draft-1021-1753.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>21/10 17:53</b> טיוטה 17 (21/10)</span><a href="files/mi-anachnu-draft-1021-1753.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לאשר את הכותרת ״רעש? או אור?״</li><li>לאשר הקלטות הקריינות בקול עומר ולהטמיע ״הרבי״</li><li>לקצר מ-68 שניות לאורך סופי של 55-60 שניות</li><li>לוודא צבעים בהירים</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>״ניו יורק״ לפי ההקלטה השנייה של מושקי, בשנייה 9</li><li>יושמו 7 התיקונים: הגיות, מקף, מגן דוד, קול הרבי, קלפי, ״מצביעים״</li><li>סגיר חדש עם הקלפי נכנס בסוף</li></ul>
-  <details><summary>נשלח ללקוח (2)</summary><div class="sentrow"><div class="meta"><b>21/10 17:54</b> הסרטון המעודן של כהנא לפי התיקונים (טיוטה 17) <a href="files/mi-anachnu-1021-1754.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>21/10 11:57</b> טיוטה 8 נשלחה בקבוצת הלקוח, עם הערה שבעיות הגהה בטיפול <a href="files/mi-anachnu-1021-1157.mp4" download>הורדה</a></div><div class="reply">הלקוח: מענדי קורטס: הכיוון של החלק הראשון טוב, החלק השני דורש ליטוש משמעותי (הר הבית, כ״ך, עבר בן גביר להוריד; למקד ברעש מול דרך חב״ד)</div></div></details>
-  <footer>עודכן 21/10 17:57<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%9E%D7%99%20%D7%90%D7%A0%D7%97%D7%A0%D7%95%D7%B4%20%28%D7%99%D7%97%D7%A1%20%D7%94%D7%A8%D7%91%D7%99%20%D7%9C%D7%9B%D7%94%D7%A0%D7%90%20%D7%95%D7%91%D7%97%D7%99%D7%A8%D7%94%20%D7%91%D7%A7%D7%9C%D7%A4%D7%99%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card wait" data-key="street-interview">
-  <header><span class="num">·</span><h2>״ראיון רחוב״ (מה זה מפלגה חרדית ביותר, מוביל לשאלון)</h2><span class="pill">מחכה</span></header>
-  <p class="st">בעקבות רעיון של מושקי, הוצעה ב-21/10 הצעה ראשונה: ראיון רחוב ב-AI עם 4-5 חב״דניקים, באורך 30-40 שניות, שמוביל לשאלון ״מבחן הקו של הרבי״. ממתינים להחלטה ולאישור הפקה.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>הצעת תסריט (21/10)</b></div>
-  <div><small>הכדור אצל</small><b>חוה</b></div></div>
-  <div class="media empty"><span>עוד אין סרטון</span></div><div class="cap"><span>&nbsp;</span></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לאשר את ההפקה ולבחור לאיזה חשבון היא תיחשב</li><li>לנסח תשובות קצרות ומגוונות ולחבר לדף השאלון</li><li>לברר מול הלקוח מה רוצים לעשות עם סרטון הפודקאסט שלו</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>נכתבה הצעה ראשונה לראיון רחוב עם כתבת</li></ul>
+<article class="card prep" data-key="v14s">
+  <h2>חסיד חב״ד מצביע ש״ס (14 שניות)</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v14s-draft-1019-0930.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-19/10 09:30</span><a href="files/v14s-draft-1019-0930.mp4" download>הורדה ↓</a></div>
+  <div class="badge prep"><i>…</i><span>בעבודה, עוד לא נשלח ללקוח</span></div>
+  <details><summary>מה בתיקון (2)</summary><ul><li>פריים ראשון: לנסח משפט פתיחה לפי הכיוון שהציע הלקוח</li><li>להחליף את הקלפי בזווית קדמית</li></ul></details>
   
-  <footer>עודכן 21/10 08:50<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%A8%D7%90%D7%99%D7%95%D7%9F%20%D7%A8%D7%97%D7%95%D7%91%D7%B4%20%28%D7%9E%D7%94%20%D7%96%D7%94%20%D7%9E%D7%A4%D7%9C%D7%92%D7%94%20%D7%97%D7%A8%D7%93%D7%99%D7%AA%20%D7%91%D7%99%D7%95%D7%AA%D7%A8%2C%20%D7%9E%D7%95%D7%91%D7%99%D7%9C%20%D7%9C%D7%A9%D7%90%D7%9C%D7%95%D7%9F%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card sent" data-key="news-items">
-  <header><span class="num">·</span><h2>סקר רחוב בכפר חב״ד (סרטון הלקוח, ״שלמה כהן״)</h2><span class="pill">נשלח ללקוח</span></header>
-  <p class="st">טיוטה 5 נשלחה ללקוח ב-17:17, אחרי תיקון סנכרון הקול והשפתיים, והאנשים הוגדלו והכתוביות במקום ריק. קודם נשלחה לו טיוטה 4. ממתינים לתגובתו. הגרסה המחוברת עם הרב דייטש טרם הוחלט אם לבנות.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 5 (21/10)</b></div>
-  <div><small>הכדור אצל</small><b>הלקוח</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/news-items-draft-1021-1717.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>21/10 17:17</b> טיוטה 5 (21/10)</span><a href="files/news-items-draft-1021-1717.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>להמתין לטקסט לאתרים ולהנחיות העריכה מהלקוח</li><li>להאזין להודעות הקוליות של מושקי ולקובץ השמע של הלקוח</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>סנכרון הקול והשפתיים תוקן בכל 20 החיתוכים</li><li>האנשים הוגדלו והכתוביות הועברו למקום ריק</li><li>הסגיר החדש עם הקלפי שולב</li></ul>
-  <details><summary>נשלח ללקוח (2)</summary><div class="sentrow"><div class="meta"><b>21/10 17:17</b> סקר כפר חב״ד, טיוטה 5 עם סנכרון מתוקן <a href="files/news-items-1021-1717.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>21/10 17:09</b> סקר כפר חב״ד, טיוטה 4 (תוקנה אחר כך בעיית סנכרון) <a href="files/news-items-1021-1709.mp4" download>הורדה</a></div></div></details>
-  <footer>עודכן 21/10 17:45<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%A1%D7%A7%D7%A8%20%D7%A8%D7%97%D7%95%D7%91%20%D7%91%D7%9B%D7%A4%D7%A8%20%D7%97%D7%91%D7%B4%D7%93%20%28%D7%A1%D7%A8%D7%98%D7%95%D7%9F%20%D7%94%D7%9C%D7%A7%D7%95%D7%97%2C%20%D7%B4%D7%A9%D7%9C%D7%9E%D7%94%20%D7%9B%D7%94%D7%9F%D7%B4%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card sent" data-key="deutsch">
-  <header><span class="num">·</span><h2>הרב דייטש</h2><span class="pill">נשלח ללקוח</span></header>
-  <p class="st">טיוטה 13 עם המוזיקה המלכותית היהודית נשלחה לצוות ב-19:24 ונראה שנשלחה ללקוח ב-19:25. המוזיקה עוצמתית בפתיחה, במכתב ובסוף, ויורדת בזמן דיבור הרב. ממתינים לתגובת הלקוח. נדרש אישור אריה דרעי לפני הפצה.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 13 (21/10)</b></div>
-  <div><small>הכדור אצל</small><b>הלקוח</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/deutsch-draft-1021-1924.mp4#t=0.1"></video></div><div class="cap"><span>טיוטה אחרונה · <b>21/10 19:24</b> טיוטה 13 (21/10)</span><a href="files/deutsch-draft-1021-1924.mp4" download>הורדה</a></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>לקבל תגובת הלקוח לטיוטה 13</li><li>לבדוק מילה-מילה שהכול נשמע מעל המוזיקה</li><li>לשלוח לאישור אריה דרעי לפני הפצה</li></ul>
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>טיוטה 13: מוזיקה ״מלכותי יהודי״ עם הנמכה בזמן דיבור הרב</li><li>נבחרה מוזיקה מקורית עוצמתית: ״מלכותי יהודי״</li><li>טיוטה 12: הרב כותב את המכתב, וכל המילים חזרו עם כתוביות</li></ul>
-  <details><summary>נשלח ללקוח (3)</summary><div class="sentrow"><div class="meta"><b>21/10 19:25</b> הרב דייטש, טיוטה 13 עם מוזיקה עוצמתית (שיוך לפי ההקשר) <a href="files/deutsch-1021-1925.mp4" download>הורדה</a></div></div><div class="sentrow"><div class="meta"><b>21/10 19:12</b> הרב דייטש, טיוטה 12 (שיוך לפי ההקשר) <a href="files/deutsch-1021-1912.mp4" download>הורדה</a></div><div class="reply">הלקוח: הלקוח ביקש מוזיקה עוצמתית בסרטון</div></div><div class="sentrow"><div class="meta"><b>21/10 17:08</b> הרב דייטש, טיוטה 5 <a href="files/deutsch-1021-1708.mp4" download>הורדה</a></div><div class="reply">הלקוח: יואל: יש תיקונים, ביקש מוזיקה של שמחת בית השואבה. מענדי קורטס: לקצר פתיחה, מנגינה עדינה ברקע, ״ג׳ ש״ס״ בכתובית, נוסח המכתב בסוף</div></div></details>
-  <footer>עודכן 21/10 19:25<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%94%D7%A8%D7%91%20%D7%93%D7%99%D7%99%D7%98%D7%A9%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
-</article>
-<article class="card wait" data-key="tefillin">
-  <header><span class="num">·</span><h2>״תפילין לכל ילד״ (הודעה לעיתונות של יו״ר ש״ס)</h2><span class="pill">מחכה</span></header>
-  <p class="st">ב-22/10 הלקוח שלח הודעה לעיתונות על הבטחת הבחירות ״תפילין לכל ילד״, יחד עם תמונה ושתי הודעות קוליות. טרם הובהר אם מבוקש סרטון ומה הכיוון.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>-</b></div>
-  <div><small>הכדור אצל</small><b>חוה</b></div></div>
-  <div class="media empty"><span>עוד אין סרטון</span></div><div class="cap"><span>&nbsp;</span></div>
-  <h3>מה צריך תיקון</h3><ul class="fix"><li>להאזין להודעות הקוליות ולהבין מה מבוקש</li><li>להחליט אם להפיק סרטון על בסיס ההודעה</li><li>לוודא נוסח וציטוטים מול הלקוח לפני הפקה</li></ul>
+</article></div></section><section class="sec ok"><div class="sechead"><h3>אושרו <b>3</b></h3><p>גרסה סופית, מוכנה להפצה</p></div><div class="grid">
+<article class="card ok" data-key="v1">
+  <h2><span class="num">1</span>הצלה</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v1-1020-1941.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-20/10 19:41</span><a href="files/v1-1020-1941.mp4" download>הורדה ↓</a></div>
+  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
   
   
-  <footer>עודכן 22/10 12:36<a class="approve" href="https://wa.me/972584111191?text=%D7%93%D7%A9%D7%91%D7%95%D7%A8%D7%93%3A%20%D7%B4%D7%AA%D7%A4%D7%99%D7%9C%D7%99%D7%9F%20%D7%9C%D7%9B%D7%9C%20%D7%99%D7%9C%D7%93%D7%B4%20%28%D7%94%D7%95%D7%93%D7%A2%D7%94%20%D7%9C%D7%A2%D7%99%D7%AA%D7%95%D7%A0%D7%95%D7%AA%20%D7%A9%D7%9C%20%D7%99%D7%95%D7%B4%D7%A8%20%D7%A9%D7%B4%D7%A1%29%20%D7%90%D7%95%D7%A9%D7%A8" target="_blank" rel="noopener" title="פותח ווצאפ עם הודעה מוכנה. ללחוץ שליחה">✓ אושר</a></footer>
 </article>
-<article class="card ok" data-key="v1"><div class="stamp">אושר</div>
-  <header><span class="num">1</span><h2>הצלה</h2><span class="pill">אושר</span></header>
-  <p class="st">אושר על ידי הלקוח ב-18/10. ממשיכים לשאר הסרטונים באותו סגנון.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>טיוטה 37</b></div>
-  <div><small>הכדור אצל</small><b>-</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v1-1020-1941.mp4#t=0.1"></video></div><div class="cap"><span>נשלח ללקוח · <b>20/10 19:41</b> סרטון 1 נשלח שוב בקבוצת הלקוח</span><a href="files/v1-1020-1941.mp4" download>הורדה</a></div>
+<article class="card ok" data-key="v3">
+  <h2><span class="num">3</span>מה הרבי היה אומר</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v3-1020-1941.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-20/10 19:41</span><a href="files/v3-1020-1941.mp4" download>הורדה ↓</a></div>
+  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
   
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>הקלטות הקריינות אושרו (קול לגימל, כדברי הרבי, הפעם לא מתפשרים)</li><li>מעברי מצלמה רציפה ושחור־לבן עד פתק ש״ס</li><li>עוצמת שמע -12 LUFS ושיא -1</li></ul>
   
-  <footer>עודכן 20/10 19:41</footer>
 </article>
-<article class="card ok" data-key="v3"><div class="stamp">אושר</div>
-  <header><span class="num">3</span><h2>מה הרבי היה אומר</h2><span class="pill">אושר</span></header>
-  <p class="st">אושר על ידי הלקוח. הסרטון נשלח ללקוח בגרסה עם קריינות הציטוט שנבחרה ומכתב הרב יצחק יוסף.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסה עם קריינות הציטוט שנבחרה (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>-</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v3-1020-1941.mp4#t=0.1"></video></div><div class="cap"><span>נשלח ללקוח · <b>20/10 19:41</b> סרטון 3 נשלח שוב בקבוצת הלקוח</span><a href="files/v3-1020-1941.mp4" download>הורדה</a></div>
+<article class="card ok" data-key="v4">
+  <h2><span class="num">4</span>הידידות</h2>
+  <div class="media"><video controls playsinline preload="metadata" src="files/v4-1020-1941.mp4#t=0.1"></video></div>
+  <div class="meta"><span>גרסה מ-20/10 19:41</span><a href="files/v4-1020-1941.mp4" download>הורדה ↓</a></div>
+  <div class="badge ok"><i>✓</i><span>הלקוח אישר</span></div>
   
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>מכתב הרב יצחק יוסף מופיע בסרטון, ונמסר ללקוח</li><li>נבחרה קריינות הציטוט: ״ומה אמר הרבי?״ ואחריה הציטוט</li><li>כתובית נבנית מילה אחר מילה עם הקול</li></ul>
   
-  <footer>עודכן 20/10 19:41</footer>
-</article>
-<article class="card ok" data-key="v4"><div class="stamp">אושר</div>
-  <header><span class="num">4</span><h2>הידידות</h2><span class="pill">אושר</span></header>
-  <p class="st">אושר. נשלחה ללקוח אופציה עם הג׳ינגל. הגרסה בלי מקורות COL להפצה בקבוצות אושרה על ידי מושקי ב-19/10.</p>
-  <div class="facts"><div><small>טיוטה אחרונה</small><b>גרסה בלי מקורות COL, עם הג׳ינגל של חוה (19/10)</b></div>
-  <div><small>הכדור אצל</small><b>-</b></div></div>
-  <div class="media"><video controls playsinline preload="metadata" src="files/v4-1020-1941.mp4#t=0.1"></video></div><div class="cap"><span>נשלח ללקוח · <b>20/10 19:41</b> סרטון 4 נשלח שוב בקבוצת הלקוח</span><a href="files/v4-1020-1941.mp4" download>הורדה</a></div>
-  
-  <h3>תוקן לאחרונה</h3><ul class="done"><li>אישור מושקי לגרסה בלי מקורות COL</li><li>הוסרו קרדיט ותמונות עם סימן מים של COL</li><li>הרב ירוסלבסקי: ״רב קהילת חב״ד בקרית מלאכי״</li></ul>
-  
-  <footer>עודכן 20/10 19:41</footer>
-</article></main>
+</article></div></section>
 <div class="foot">הדף מתעדכן אוטומטית מקבוצות העבודה</div>
-</div>
+</main>
 <script>
-const T=new Date("2026-10-27T07:00:00+02:00").getTime(),p=n=>String(n).padStart(2,"0"),$=id=>document.getElementById(id);
+const T=new Date("2026-10-27T07:00:00+02:00").getTime(),p=n=>String(n).padStart(2,"0");
 function tick(){let r=Math.max(0,T-Date.now());const d=Math.floor(r/864e5);r%=864e5;const h=Math.floor(r/36e5);r%=36e5;
-$("d").textContent=d;$("h").textContent=p(h);$("m").textContent=p(Math.floor(r/6e4));$("s").textContent=p(Math.floor(r%6e4/1e3));
-$("clock").classList.toggle("hot",T-Date.now()<72*36e5)}
+document.getElementById("t").innerHTML=d+" ימים · <bdi dir=ltr>"+p(h)+":"+p(Math.floor(r/6e4))+":"+p(Math.floor(r%6e4/1e3))+"</bdi>"}
 tick();setInterval(tick,1000);
 
 </script>
